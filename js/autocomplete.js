@@ -296,6 +296,7 @@ function autocomplete(inp, arr) {
       }
     }
   });
+
   function addActive(x) {
     /*a function to classify an item as "active":*/
     if (!x) return false;

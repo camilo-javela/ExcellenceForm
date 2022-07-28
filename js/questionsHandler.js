@@ -380,6 +380,15 @@ const questions = {
     },
   ],
 };
+
+const emails = [
+  {
+    Subject: "",
+    Body: "",
+  },
+  {},
+];
+
 let answers = [];
 
 let mainInputTag;
@@ -389,6 +398,17 @@ let auxiliarQuestion = [];
 function actualQuestion() {
   mainInputTag = document.getElementsByClassName("mainInput")[0];
   actualQuestionTag = document.getElementById("actualQuestion");
+  document
+    .getElementById("actualAnswer")
+    .addEventListener("keypress", function (e) {
+      e.preventDefault();
+      if (e.key === "Enter") {
+        document.getElementById("button").click();
+      } else if (document.getElementById("actualAnswer")) {
+        document.getElementById("actualAnswer").value =
+          document.getElementById("actualAnswer").value + e.key;
+      }
+    });
   setTimeout(function () {
     exitAnimation();
     setTimeout(function () {
@@ -546,6 +566,9 @@ function createInput(questionString, behavior) {
   var s = document.createElement("script");
 
   if (behavior && behavior === "autocomplete") {
+    var actualAnswer = document.getElementById("actualAnswer");
+    var actualAnswerClone = actualAnswer.cloneNode(true);
+    actualAnswer.parentNode.replaceChild(actualAnswerClone, actualAnswer);
     document.getElementById("actualAnswer").id = "actualAnswer" + behavior;
 
     s.innerHTML =
@@ -562,6 +585,16 @@ function createInput(questionString, behavior) {
       writeAnswer = actualAnswer.value;
       actualAnswer.id = "actualAnswer";
       var actualAnswerClone = actualAnswer.cloneNode(true);
+      actualAnswerClone.addEventListener("keypress", function (e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+          document.getElementById("button").click();
+        } else {
+          document.getElementById("actualAnswer").value =
+            document.getElementById("actualAnswer").value + e.key;
+        }
+      });
+
       actualAnswer.parentNode.replaceChild(actualAnswerClone, actualAnswer);
       s.innerHTML = "";
     } else {
@@ -639,4 +672,18 @@ function findResponseArr(arr) {
 function response() {
   //aqui has lo que tengas que hacer para el form o como sea que quieras manejar las respuestas
   console.log(answers);
+  sendEmail(answers[1], {
+    Subject: "Completaste el test",
+    Body: "te enviamos nuestros productos",
+  });
+}
+
+function sendEmail(email, objToSend) {
+  Email.send({
+    SecureToken: "0c1cc91b-b25a-4e1a-a95b-d8cf4f98befb",
+    To: email,
+    From: "javelav20151@gmail.com",
+    Subject: objToSend.Subject,
+    Body: objToSend.Body,
+  }).then((message) => alert(message));
 }
