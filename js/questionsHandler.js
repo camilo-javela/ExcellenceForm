@@ -1,8 +1,253 @@
+const countries = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Anguilla",
+  "Antigua &amp; Barbuda",
+  "Argentina",
+  "Armenia",
+  "Aruba",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bermuda",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia &amp; Herzegovina",
+  "Botswana",
+  "Brazil",
+  "British Virgin Islands",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Cayman Islands",
+  "Central Arfrican Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Congo",
+  "Cook Islands",
+  "Costa Rica",
+  "Cote D Ivoire",
+  "Croatia",
+  "Cuba",
+  "Curacao",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Ethiopia",
+  "Falkland Islands",
+  "Faroe Islands",
+  "Fiji",
+  "Finland",
+  "France",
+  "French Polynesia",
+  "French West Indies",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Gibraltar",
+  "Greece",
+  "Greenland",
+  "Grenada",
+  "Guam",
+  "Guatemala",
+  "Guernsey",
+  "Guinea",
+  "Guinea Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hong Kong",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Isle of Man",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jersey",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Kosovo",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Macau",
+  "Macedonia",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Montserrat",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauro",
+  "Nepal",
+  "Netherlands",
+  "Netherlands Antilles",
+  "New Caledonia",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Palestine",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Puerto Rico",
+  "Qatar",
+  "Reunion",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Pierre &amp; Miquelon",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "St Kitts &amp; Nevis",
+  "St Lucia",
+  "St Vincent",
+  "Sudan",
+  "Suriname",
+  "Swaziland",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Timor L'Este",
+  "Togo",
+  "Tonga",
+  "Trinidad &amp; Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Turks &amp; Caicos",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States of America",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City",
+  "Venezuela",
+  "Vietnam",
+  "Virgin Islands (US)",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+];
+
+const validations = [
+  {
+    type: "age",
+    regex: /^(1[89]|[2-9]d)$/,
+  },
+  {
+    type: "email",
+    regex: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
+  },
+  {
+    type: "name",
+    regex: /^(?!\s*$).+/,
+  },
+  {
+    type: "country",
+    regex: /^(?!\s*$).+/,
+  },
+];
+
 const questions = {
   ask: "Para empezar, por favor dinos cómo te llamas.",
   direction: "",
   behavior: "",
   icon: "",
+  validationType: "name",
   type: "input",
   nextQuestions: [
     {
@@ -10,6 +255,7 @@ const questions = {
       direction: "",
       behavior: "",
       icon: "",
+      validationType: "email",
       type: "input",
       nextQuestions: [
         {
@@ -17,6 +263,7 @@ const questions = {
           direction: "",
           behavior: "autocomplete",
           icon: "",
+          validationType: "country",
           type: "input",
           nextQuestions: [
             {
@@ -24,6 +271,7 @@ const questions = {
               direction: "",
               behavior: "",
               icon: "",
+              validationType: "none",
               type: "input",
               nextQuestions: [
                 {
@@ -31,6 +279,7 @@ const questions = {
                   direction: "",
                   behavior: "",
                   icon: "",
+                  validationType: "age",
                   type: "input",
                   nextQuestions: [
                     {
@@ -40,6 +289,7 @@ const questions = {
                       label:
                         "¿Estas embarazada o estás pensando quedarte embarazada?",
                       icon: "fas fa-baby",
+                      validationType: "none",
                       type: "select",
                       nextQuestions: [
                         {
@@ -48,6 +298,7 @@ const questions = {
                           behavior: "",
                           label: "¿Estás tomando Vitaminas Prentales?",
                           icon: "",
+                          validationType: "none",
                           type: "select",
                           nextQuestions: [
                             {
@@ -57,6 +308,7 @@ const questions = {
                               icon: "",
                               label:
                                 "Felicidades!!! has terminado el formulario",
+                              validationType: "none",
                               type: "end",
                               nextQuestions: [],
                             },
@@ -68,6 +320,7 @@ const questions = {
                           behavior: "",
                           label: "¿Estás tomando Vitaminas Prentales?",
                           icon: "",
+                          validationType: "none",
                           type: "select",
                           nextQuestions: [
                             {
@@ -77,6 +330,7 @@ const questions = {
                               icon: "",
                               label:
                                 "Felicidades!!! has terminado el formulario",
+                              validationType: "none",
                               type: "end",
                               nextQuestions: [],
                             },
@@ -91,6 +345,7 @@ const questions = {
                       icon: "fas fa-baby-carriage",
                       label:
                         "¿Estas embarazada o estás pensando quedarte embarazada?",
+                      validationType: "none",
                       type: "select",
                       nextQuestions: [
                         {
@@ -100,6 +355,7 @@ const questions = {
                           label:
                             "¿Estás tomando suplementos vitamínicos para fertilidad o vitaminas prenatales?",
                           icon: "",
+                          validationType: "none",
                           type: "select",
                           nextQuestions: [
                             {
@@ -109,6 +365,7 @@ const questions = {
                               label:
                                 "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
                               icon: "",
+                              validationType: "none",
                               type: "select",
                               nextQuestions: [
                                 {
@@ -118,6 +375,7 @@ const questions = {
                                   label:
                                     "¿Llevas más de 6 meses intentando quedar embarazada?",
                                   icon: "",
+                                  validationType: "none",
                                   type: "select",
                                   nextQuestions: [
                                     {
@@ -127,6 +385,7 @@ const questions = {
                                       label:
                                         "¿Has consultado con tu ginecólogo acerca de este tema?",
                                       icon: "",
+                                      validationType: "none",
                                       type: "select",
                                       nextQuestions: [
                                         {
@@ -136,6 +395,7 @@ const questions = {
                                           icon: "",
                                           label:
                                             "¿Has realizado pruebas de reserva ovárica?",
+                                          validationType: "none",
                                           type: "select",
                                           nextQuestions: [
                                             {
@@ -145,6 +405,7 @@ const questions = {
                                               icon: "",
                                               label:
                                                 "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                              validationType: "none",
                                               type: "select",
                                               nextQuestions: [
                                                 {
@@ -154,6 +415,7 @@ const questions = {
                                                   icon: "fas fa-shish-kebab",
                                                   label:
                                                     "Felicidades!!! has terminado el formulario",
+                                                  validationType: "none",
                                                   type: "end",
                                                   nextQuestions: [],
                                                 },
@@ -166,6 +428,7 @@ const questions = {
                                               icon: "",
                                               label:
                                                 "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                              validationType: "none",
                                               type: "select",
                                               nextQuestions: [
                                                 {
@@ -175,6 +438,7 @@ const questions = {
                                                   icon: "fas fa-shish-kebab",
                                                   label:
                                                     "Felicidades!!! has terminado el formulario",
+                                                  validationType: "none",
                                                   type: "end",
                                                   nextQuestions: [],
                                                 },
@@ -189,6 +453,7 @@ const questions = {
                                           icon: "",
                                           label:
                                             "¿Has realizado pruebas de reserva ovárica?",
+                                          validationType: "none",
                                           type: "select",
                                           nextQuestions: [
                                             {
@@ -198,6 +463,7 @@ const questions = {
                                               icon: "fas fa-shish-kebab",
                                               label:
                                                 "Felicidades!!! has terminado el formulario",
+                                              validationType: "none",
                                               type: "end",
                                               nextQuestions: [],
                                             },
@@ -210,6 +476,7 @@ const questions = {
                                           icon: "",
                                           label:
                                             "¿Has realizado pruebas de reserva ovárica?",
+                                          validationType: "none",
                                           type: "select",
                                           nextQuestions: [
                                             {
@@ -219,6 +486,7 @@ const questions = {
                                               icon: "fas fa-shish-kebab",
                                               label:
                                                 "Felicidades!!! has terminado el formulario",
+                                              validationType: "none",
                                               type: "end",
                                               nextQuestions: [],
                                             },
@@ -233,6 +501,7 @@ const questions = {
                                       label:
                                         "¿Has consultado con tu ginecólogo acerca de este tema?",
                                       icon: "",
+                                      validationType: "none",
                                       type: "select",
                                       nextQuestions: [
                                         {
@@ -242,6 +511,7 @@ const questions = {
                                           icon: "fas fa-shish-kebab",
                                           label:
                                             "Felicidades!!! has terminado el formulario",
+                                          validationType: "none",
                                           type: "end",
                                           nextQuestions: [],
                                         },
@@ -256,6 +526,7 @@ const questions = {
                                   label:
                                     "¿Llevas más de 6 meses intentando quedar embarazada?",
                                   icon: "",
+                                  validationType: "none",
                                   type: "select",
                                   nextQuestions: [
                                     {
@@ -265,6 +536,7 @@ const questions = {
                                       icon: "fas fa-shish-kebab",
                                       label:
                                         "Felicidades!!! has terminado el formulario",
+                                      validationType: "none",
                                       type: "end",
                                       nextQuestions: [],
                                     },
@@ -279,6 +551,7 @@ const questions = {
                               label:
                                 "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
                               icon: "",
+                              validationType: "none",
                               type: "select",
                               nextQuestions: [
                                 {
@@ -288,6 +561,7 @@ const questions = {
                                   label:
                                     "¿Llevas más de 6 meses intentando quedar embarazada?",
                                   icon: "",
+                                  validationType: "none",
                                   type: "select",
                                   nextQuestions: [
                                     {
@@ -297,6 +571,7 @@ const questions = {
                                       icon: "fas fa-shish-kebab",
                                       label:
                                         "Felicidades!!! has terminado el formulario",
+                                      validationType: "none",
                                       type: "end",
                                       nextQuestions: [],
                                     },
@@ -309,6 +584,7 @@ const questions = {
                                   label:
                                     "¿Llevas más de 6 meses intentando quedar embarazada?",
                                   icon: "",
+                                  validationType: "none",
                                   type: "select",
                                   nextQuestions: [
                                     {
@@ -318,6 +594,7 @@ const questions = {
                                       icon: "fas fa-shish-kebab",
                                       label:
                                         "Felicidades!!! has terminado el formulario",
+                                      validationType: "none",
                                       type: "end",
                                       nextQuestions: [],
                                     },
@@ -334,6 +611,7 @@ const questions = {
                           label:
                             "¿Estás tomando suplementos vitamínicos para fertilidad o vitaminas prenatales?",
                           icon: "",
+                          validationType: "none",
                           type: "select",
                           nextQuestions: [
                             {
@@ -343,6 +621,7 @@ const questions = {
                               icon: "fas fa-shish-kebab",
                               label:
                                 "Felicidades!!! has terminado el formulario",
+                              validationType: "none",
                               type: "end",
                               nextQuestions: [],
                             },
@@ -357,6 +636,7 @@ const questions = {
                       icon: "fas fa-shish-kebab",
                       label:
                         "¿Estas embarazada o estás pensando quedarte embarazada?",
+                      validationType: "none",
                       type: "select",
                       nextQuestions: [
                         {
@@ -365,6 +645,7 @@ const questions = {
                           behavior: "",
                           icon: "",
                           label: "Felicidades!!! has terminado el formulario",
+                          validationType: "none",
                           type: "end",
                           nextQuestions: [],
                         },
@@ -386,7 +667,7 @@ const emails = [
     Subject: "",
     Body: "",
   },
-  {},
+  { Subject: "", Body: "" },
 ];
 
 let answers = [];
@@ -431,24 +712,36 @@ function exitAnimation() {
 }
 
 function saveName() {
-  var answer = document.getElementById("actualQuestion").innerHTML;
-  exitAnimation();
-  setTimeout(function () {
-    var name = document.getElementById("actualAnswer").value;
-    document.getElementById("actualAnswer").value = "";
-    document.getElementById("actualQuestion").innerHTML =
-      "Hola " +
-      name +
-      ", te haremos unas breves preguntas para conocer más a fondo tu caso";
-    document.getElementById("animation").style.animation = "none";
-    entryAnimation();
-    document.getElementById("button").style.display = "none";
-    document.getElementById("actualAnswer").style.display = "none";
-
+  var name = document.getElementById("actualAnswer").value;
+  let resultValidation = regexValidation(
+    name,
+    validations.find(({ type, regex }) => {
+      if (type === questions.validationType) {
+        return regex;
+      }
+    })
+  );
+  if (resultValidation) {
+    var answer = document.getElementById("actualQuestion").innerHTML;
+    exitAnimation();
     setTimeout(function () {
-      saveAnswer(answer, name);
-    }, 3000);
-  }, 1000);
+      document.getElementById("actualAnswer").value = "";
+      document.getElementById("actualQuestion").innerHTML =
+        "Hola " +
+        name +
+        ", te haremos unas breves preguntas para conocer más a fondo tu caso";
+      document.getElementById("animation").style.animation = "none";
+      entryAnimation();
+      document.getElementById("button").style.display = "none";
+      document.getElementById("actualAnswer").style.display = "none";
+
+      setTimeout(function () {
+        saveAnswer(answer, name);
+      }, 3000);
+    }, 1000);
+  } else {
+    console.log("error");
+  }
 }
 
 function saveAnswer(answer, writeAnswer) {
@@ -462,17 +755,27 @@ function saveAnswer(answer, writeAnswer) {
 }
 
 function renderizeNextQuestions(questionsToRender) {
-  questionsToRender.map(({ ask, type, label, icon, direction, behavior }) => {
-    createBlock(ask, type, label, icon, direction, behavior);
-  });
+  questionsToRender.map(
+    ({ ask, type, label, icon, direction, behavior, validationType }) => {
+      createBlock(ask, type, label, icon, direction, behavior, validationType);
+    }
+  );
   entryAnimation();
 }
 
-function createBlock(questionString, type, label, icon, direction, behavior) {
+function createBlock(
+  questionString,
+  type,
+  label,
+  icon,
+  direction,
+  behavior,
+  validationType
+) {
   if (type === "select") {
     createSelect(questionString, label, icon, direction);
   } else if (type === "input") {
-    createInput(questionString, behavior);
+    createInput(questionString, behavior, validationType);
   } else {
     createEnd(questionString, label);
   }
@@ -521,7 +824,6 @@ function createSelect(questionString, label, icon, direction) {
   }
 
   mainBlock.append(question);
-  console.log(direction);
   localMainInput.style.flexDirection = direction != "column" ? "row" : "column";
   localMainInput.style.flexWrap = "nowrap";
   if (direction == "column") {
@@ -533,20 +835,18 @@ function createSelect(questionString, label, icon, direction) {
   }
   localMainInput.style.width = "100%";
   localMainInput.style.height = "100%";
-  localMainInput.appendChild(mainBlock);
   mainBlock.addEventListener("click", function (e) {
-    const answer = e.target.innerHTML.includes("-->")
-      ? e.target.innerHTML
-          .split("-->")[1]
-          .replace("<p>", "")
-          .replace("</p>", "")
-      : e.target.innerHTML.replace("<p>", "").replace("</p>", "");
-    console.log(answer);
+    const answer =
+      e.target.nodeName === "P"
+        ? e.target.innerHTML
+        : e.target.lastChild.innerHTML;
+
     saveAnswer(answer);
   });
+  localMainInput.appendChild(mainBlock);
 }
 
-function createInput(questionString, behavior) {
+function createInput(questionString, behavior, validationType) {
   var localMainInput = document.getElementsByClassName("mainInput")[0];
   if (localMainInput) {
     localMainInput.remove();
@@ -601,8 +901,23 @@ function createInput(questionString, behavior) {
       writeAnswer = document.getElementById("actualAnswer").value;
     }
 
-    var answer = document.getElementById("actualQuestion").innerHTML;
-    saveAnswer(answer, writeAnswer);
+    let resultValidation =
+      validationType !== "none"
+        ? regexValidation(
+            writeAnswer,
+            validations.find(({ type, regex }) => {
+              if (type === validationType) {
+                return regex;
+              }
+            })
+          )
+        : true;
+    if (!resultValidation) {
+      console.log("error");
+    } else {
+      var answer = document.getElementById("actualQuestion").innerHTML;
+      saveAnswer(answer, writeAnswer);
+    }
   };
 }
 
@@ -614,16 +929,7 @@ function createEnd(finishMessage, FinishTitle) {
   document.getElementsByClassName("container")[0].append(actualQuestionTag);
   document.getElementsByClassName("container")[0].append(mainInputTag);
 
-  // document.getElementById("button").style.display = "none";
-  // document.getElementById("actualAnswer").style.display = "none";
-  // document.getElementsByClassName("container")[0].style.flexDirection =
-  //   "column";
-
   document.getElementById("actualQuestion").innerHTML = FinishTitle;
-
-  // document.getElementById("button").onclick = function () {
-  //   console.log("pressed");
-  // };
   response();
 }
 
@@ -639,9 +945,7 @@ function nextQuestionsFinder(questionObject, answer) {
     if (nextNode) {
       return nextQuestionsFinder(nextNode, answer);
     } else {
-      //aqui esta el problema de que se repita **arreglar urgentemente
       questionObject.forEach((obj) => {
-        console.log(2, obj);
         if (obj.ask == answer) {
           return obj.nextQuestions;
         } else {
@@ -651,7 +955,6 @@ function nextQuestionsFinder(questionObject, answer) {
           );
           if (posibleQuestions) {
             auxiliarQuestion = posibleQuestions;
-            console.log(3, posibleQuestions);
           }
         }
       });
@@ -661,7 +964,6 @@ function nextQuestionsFinder(questionObject, answer) {
 }
 
 function findResponseArr(arr) {
-  console.log(4, arr);
   if (arr[0] && arr[0].ask) {
     return arr;
   } else {
@@ -671,7 +973,6 @@ function findResponseArr(arr) {
 
 function response() {
   //aqui has lo que tengas que hacer para el form o como sea que quieras manejar las respuestas
-  console.log(answers);
   sendEmail(answers[1], {
     Subject: "Completaste el test",
     Body: "te enviamos nuestros productos",
@@ -684,6 +985,12 @@ function sendEmail(email, objToSend) {
     To: email,
     From: "javelav20151@gmail.com",
     Subject: objToSend.Subject,
-    Body: objToSend.Body,
-  }).then((message) => alert(message));
+    Body: "Hola," + " " + answers[0] + " " + objToSend.Body,
+  }).then((message) => console.log(message));
 }
+
+function regexValidation(string, regexObject) {
+  return regexObject.regex.test(string);
+}
+
+function inputTypeError(validationType) {}
