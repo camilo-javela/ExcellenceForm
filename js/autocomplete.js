@@ -48,6 +48,7 @@ function autocomplete(inp, arr) {
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function (e) {
     var x = document.getElementById(this.id + "autocomplete-list");
+
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
       /*If the arrow DOWN key is pressed,
@@ -64,10 +65,13 @@ function autocomplete(inp, arr) {
       addActive(x);
     } else if (e.keyCode == 13) {
       /*If the ENTER key is pressed, prevent the form from being submitted,*/
-      e.preventDefault();
+
       if (currentFocus > -1) {
         /*and simulate a click on the "active" item:*/
         if (x) x[currentFocus].click();
+      }
+      if (countries.some((country) => this.value === country)) {
+        document.getElementById("button").click();
       }
     }
   });

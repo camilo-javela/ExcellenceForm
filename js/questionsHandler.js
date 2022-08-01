@@ -1,244 +1,217 @@
 const countries = [
-  "Afghanistan",
+  "Afganistán",
   "Albania",
-  "Algeria",
+  "Alemania",
   "Andorra",
   "Angola",
-  "Anguilla",
-  "Antigua &amp; Barbuda",
+  "Antigua y Barbuda",
+  "Arabia Saudita",
+  "Argelia",
   "Argentina",
   "Armenia",
-  "Aruba",
   "Australia",
   "Austria",
-  "Azerbaijan",
+  "Azerbaiyán",
   "Bahamas",
-  "Bahrain",
-  "Bangladesh",
+  "Bangladés",
   "Barbados",
-  "Belarus",
-  "Belgium",
-  "Belize",
-  "Benin",
-  "Bermuda",
-  "Bhutan",
+  "Baréin",
+  "Bélgica",
+  "Belice",
+  "Benín",
+  "Bielorrusia",
+  "Birmania",
   "Bolivia",
-  "Bosnia &amp; Herzegovina",
-  "Botswana",
-  "Brazil",
-  "British Virgin Islands",
-  "Brunei",
+  "Bosnia y Herzegovina",
+  "Botsuana",
+  "Brasil",
+  "Brunéi",
   "Bulgaria",
   "Burkina Faso",
   "Burundi",
-  "Cambodia",
-  "Cameroon",
-  "Canada",
-  "Cape Verde",
-  "Cayman Islands",
-  "Central Arfrican Republic",
+  "Bután",
+  "Cabo Verde",
+  "Camboya",
+  "Camerún",
+  "Canadá",
+  "Catar",
   "Chad",
   "Chile",
   "China",
+  "Chipre",
+  "Ciudad del Vaticano",
   "Colombia",
-  "Congo",
-  "Cook Islands",
+  "Comoras",
+  "Corea del Norte",
+  "Corea del Sur",
+  "Costa de Marfil",
   "Costa Rica",
-  "Cote D Ivoire",
-  "Croatia",
+  "Croacia",
   "Cuba",
-  "Curacao",
-  "Cyprus",
-  "Czech Republic",
-  "Denmark",
-  "Djibouti",
+  "Dinamarca",
   "Dominica",
-  "Dominican Republic",
   "Ecuador",
-  "Egypt",
+  "Egipto",
   "El Salvador",
-  "Equatorial Guinea",
+  "Emiratos Árabes Unidos",
   "Eritrea",
+  "Eslovaquia",
+  "Eslovenia",
+  "España",
+  "Estados Unidos",
   "Estonia",
-  "Ethiopia",
-  "Falkland Islands",
-  "Faroe Islands",
-  "Fiji",
-  "Finland",
-  "France",
-  "French Polynesia",
-  "French West Indies",
-  "Gabon",
+  "Etiopía",
+  "Filipinas",
+  "Finlandia",
+  "Fiyi",
+  "Francia",
+  "Gabón",
   "Gambia",
   "Georgia",
-  "Germany",
   "Ghana",
-  "Gibraltar",
-  "Greece",
-  "Greenland",
-  "Grenada",
-  "Guam",
+  "Granada",
+  "Grecia",
   "Guatemala",
-  "Guernsey",
-  "Guinea",
-  "Guinea Bissau",
   "Guyana",
-  "Haiti",
+  "Guinea",
+  "Guinea ecuatorial",
+  "Guinea-Bisáu",
+  "Haití",
   "Honduras",
-  "Hong Kong",
-  "Hungary",
-  "Iceland",
+  "Hungría",
   "India",
   "Indonesia",
-  "Iran",
-  "Iraq",
-  "Ireland",
-  "Isle of Man",
+  "Irak",
+  "Irán",
+  "Irlanda",
+  "Islandia",
+  "Islas Marshall",
+  "Islas Salomón",
   "Israel",
-  "Italy",
+  "Italia",
   "Jamaica",
-  "Japan",
-  "Jersey",
-  "Jordan",
-  "Kazakhstan",
-  "Kenya",
+  "Japón",
+  "Jordania",
+  "Kazajistán",
+  "Kenia",
+  "Kirguistán",
   "Kiribati",
-  "Kosovo",
   "Kuwait",
-  "Kyrgyzstan",
   "Laos",
-  "Latvia",
-  "Lebanon",
-  "Lesotho",
+  "Lesoto",
+  "Letonia",
+  "Líbano",
   "Liberia",
-  "Libya",
+  "Libia",
   "Liechtenstein",
-  "Lithuania",
-  "Luxembourg",
-  "Macau",
-  "Macedonia",
+  "Lituania",
+  "Luxemburgo",
   "Madagascar",
-  "Malawi",
-  "Malaysia",
-  "Maldives",
-  "Mali",
+  "Malasia",
+  "Malaui",
+  "Maldivas",
+  "Malí",
   "Malta",
-  "Marshall Islands",
+  "Marruecos",
+  "Mauricio",
   "Mauritania",
-  "Mauritius",
-  "Mexico",
+  "México",
   "Micronesia",
-  "Moldova",
-  "Monaco",
+  "Moldavia",
+  "Mónaco",
   "Mongolia",
   "Montenegro",
-  "Montserrat",
-  "Morocco",
   "Mozambique",
-  "Myanmar",
   "Namibia",
-  "Nauro",
+  "Nauru",
   "Nepal",
-  "Netherlands",
-  "Netherlands Antilles",
-  "New Caledonia",
-  "New Zealand",
   "Nicaragua",
-  "Niger",
+  "Níger",
   "Nigeria",
-  "North Korea",
-  "Norway",
-  "Oman",
-  "Pakistan",
-  "Palau",
-  "Palestine",
-  "Panama",
-  "Papua New Guinea",
+  "Noruega",
+  "Nueva Zelanda",
+  "Omán",
+  "Países Bajos",
+  "Pakistán",
+  "Palaos",
+  "Palestina",
+  "Panamá",
+  "Papúa Nueva Guinea",
   "Paraguay",
-  "Peru",
-  "Philippines",
-  "Poland",
+  "Perú",
+  "Polonia",
   "Portugal",
-  "Puerto Rico",
-  "Qatar",
-  "Reunion",
-  "Romania",
-  "Russia",
-  "Rwanda",
-  "Saint Pierre &amp; Miquelon",
+  "Reino Unido",
+  "República Centroafricana",
+  "República Checa",
+  "República de Macedonia",
+  "República del Congo",
+  "República Democrática del Congo",
+  "República Dominicana",
+  "República Sudafricana",
+  "Ruanda",
+  "Rumanía",
+  "Rusia",
   "Samoa",
+  "San Cristóbal y Nieves",
   "San Marino",
-  "Sao Tome and Principe",
-  "Saudi Arabia",
+  "San Vicente y las Granadinas",
+  "Santa Lucía",
+  "Santo Tomé y Príncipe",
   "Senegal",
   "Serbia",
   "Seychelles",
-  "Sierra Leone",
-  "Singapore",
-  "Slovakia",
-  "Slovenia",
-  "Solomon Islands",
+  "Sierra Leona",
+  "Singapur",
+  "Siria",
   "Somalia",
-  "South Africa",
-  "South Korea",
-  "South Sudan",
-  "Spain",
   "Sri Lanka",
-  "St Kitts &amp; Nevis",
-  "St Lucia",
-  "St Vincent",
-  "Sudan",
-  "Suriname",
-  "Swaziland",
-  "Sweden",
-  "Switzerland",
-  "Syria",
-  "Taiwan",
-  "Tajikistan",
+  "Suazilandia",
+  "Sudán",
+  "Sudán del Sur",
+  "Suecia",
+  "Suiza",
+  "Surinam",
+  "Tailandia",
   "Tanzania",
-  "Thailand",
-  "Timor L'Este",
+  "Tayikistán",
+  "Timor Oriental",
   "Togo",
   "Tonga",
-  "Trinidad &amp; Tobago",
-  "Tunisia",
-  "Turkey",
-  "Turkmenistan",
-  "Turks &amp; Caicos",
+  "Trinidad y Tobago",
+  "Túnez",
+  "Turkmenistán",
+  "Turquía",
   "Tuvalu",
+  "Ucrania",
   "Uganda",
-  "Ukraine",
-  "United Arab Emirates",
-  "United Kingdom",
-  "United States of America",
   "Uruguay",
-  "Uzbekistan",
+  "Uzbekistán",
   "Vanuatu",
-  "Vatican City",
   "Venezuela",
   "Vietnam",
-  "Virgin Islands (US)",
   "Yemen",
+  "Yibuti",
   "Zambia",
-  "Zimbabwe",
+  "Zimbabue",
 ];
 
 const validations = [
   {
     type: "age",
-    regex: /^(1[89]|[2-9]d)$/,
+    regex: /^(1[89]|[2-9]\d)$/,
   },
   {
     type: "email",
     regex: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
   },
   {
-    type: "name",
+    type: "nospaces",
     regex: /^(?!\s*$).+/,
   },
   {
     type: "country",
-    regex: /^(?!\s*$).+/,
+    regex: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
   },
 ];
 
@@ -247,11 +220,11 @@ const questions = {
   direction: "",
   behavior: "",
   icon: "",
-  validationType: "name",
+  validationType: "nospaces",
   type: "input",
   nextQuestions: [
     {
-      ask: "¿Cual es tu dirección de correo?",
+      ask: "¿Cual es tu correo electronico? Para poder enviarte nuestras recomendaciones",
       direction: "",
       behavior: "",
       icon: "",
@@ -263,7 +236,7 @@ const questions = {
           direction: "",
           behavior: "autocomplete",
           icon: "",
-          validationType: "country",
+          validationType: "nospaces",
           type: "input",
           nextQuestions: [
             {
@@ -271,7 +244,7 @@ const questions = {
               direction: "",
               behavior: "",
               icon: "",
-              validationType: "none",
+              validationType: "nospaces",
               type: "input",
               nextQuestions: [
                 {
@@ -630,7 +603,7 @@ const questions = {
                       ],
                     },
                     {
-                      ask: "No estoy segura de estar embarazada",
+                      ask: "No estoy segura",
                       direction: "column",
                       behavior: "",
                       icon: "fas fa-shish-kebab",
@@ -681,13 +654,9 @@ function actualQuestion() {
   actualQuestionTag = document.getElementById("actualQuestion");
   document
     .getElementById("actualAnswer")
-    .addEventListener("keypress", function (e) {
-      e.preventDefault();
-      if (e.key === "Enter") {
+    .addEventListener("keydown", function (e) {
+      if (e.keyCode == 13) {
         document.getElementById("button").click();
-      } else if (document.getElementById("actualAnswer")) {
-        document.getElementById("actualAnswer").value =
-          document.getElementById("actualAnswer").value + e.key;
       }
     });
   setTimeout(function () {
@@ -727,9 +696,9 @@ function saveName() {
     setTimeout(function () {
       document.getElementById("actualAnswer").value = "";
       document.getElementById("actualQuestion").innerHTML =
-        "Hola " +
+        "Bienvenid@ " +
         name +
-        ", te haremos unas breves preguntas para conocer más a fondo tu caso";
+        ", te haremos algunas preguntas para que puedas recibir las recomendaciones de nuestros expertos ";
       document.getElementById("animation").style.animation = "none";
       entryAnimation();
       document.getElementById("button").style.display = "none";
@@ -825,9 +794,11 @@ function createSelect(questionString, label, icon, direction) {
 
   mainBlock.append(question);
   localMainInput.style.flexDirection = direction != "column" ? "row" : "column";
+  localMainInput.style.alignItems =
+    direction != "column" ? "baseline" : "center";
   localMainInput.style.flexWrap = "nowrap";
   if (direction == "column") {
-    mainBlock.style.marginTop = "5px";
+    mainBlock.style.marginTop = "10px";
     mainBlock.style.width = "50%";
     mainBlock.style.textAlign = "left";
   } else {
@@ -836,10 +807,16 @@ function createSelect(questionString, label, icon, direction) {
   localMainInput.style.width = "100%";
   localMainInput.style.height = "100%";
   mainBlock.addEventListener("click", function (e) {
-    const answer =
-      e.target.nodeName === "P"
-        ? e.target.innerHTML
-        : e.target.lastChild.innerHTML;
+    let answer;
+    if (e.target.nodeName === "P") {
+      answer = e.target.innerHTML;
+    } else if (e.target.nodeName === "svg") {
+      answer = e.target.parentNode.lastChild.innerHTML;
+    } else if (e.target.nodeName === "path") {
+      answer = e.target.parentNode.parentNode.lastChild.innerHTML;
+    } else {
+      answer = e.target.lastChild.innerHTML;
+    }
 
     saveAnswer(answer);
   });
@@ -885,13 +862,9 @@ function createInput(questionString, behavior, validationType) {
       writeAnswer = actualAnswer.value;
       actualAnswer.id = "actualAnswer";
       var actualAnswerClone = actualAnswer.cloneNode(true);
-      actualAnswerClone.addEventListener("keypress", function (e) {
-        e.preventDefault();
-        if (e.key === "Enter") {
+      actualAnswerClone.addEventListener("keydown", function (e) {
+        if (e.keyCode == 13) {
           document.getElementById("button").click();
-        } else {
-          document.getElementById("actualAnswer").value =
-            document.getElementById("actualAnswer").value + e.key;
         }
       });
 
@@ -912,11 +885,11 @@ function createInput(questionString, behavior, validationType) {
             })
           )
         : true;
-    if (!resultValidation) {
-      console.log("error");
-    } else {
+    if (resultValidation) {
       var answer = document.getElementById("actualQuestion").innerHTML;
       saveAnswer(answer, writeAnswer);
+    } else {
+      console.log("error");
     }
   };
 }
@@ -990,7 +963,11 @@ function sendEmail(email, objToSend) {
 }
 
 function regexValidation(string, regexObject) {
-  return regexObject.regex.test(string);
+  let isCorrect =
+    regexObject.regex.test(string) ||
+    countries.some((country) => string === country);
+  if (!isCorrect) inputTypeError(regexObject.type);
+  return isCorrect;
 }
 
 function inputTypeError(validationType) {}
