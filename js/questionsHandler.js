@@ -200,18 +200,22 @@ const validations = [
   {
     type: "age",
     regex: /^(1[89]|[2-9]\d)$/,
+    message: "",
   },
   {
     type: "email",
     regex: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
+    message: "",
   },
   {
     type: "nospaces",
     regex: /^(?!\s*$).+/,
+    message: "",
   },
   {
     type: "country",
     regex: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
+    message: "",
   },
 ];
 
@@ -966,8 +970,8 @@ function regexValidation(string, regexObject) {
   let isCorrect =
     regexObject.regex.test(string) ||
     countries.some((country) => string === country);
-  if (!isCorrect) inputTypeError(regexObject.type);
+  if (!isCorrect) inputTypeError(regexObject.message);
   return isCorrect;
 }
 
-function inputTypeError(validationType) {}
+function inputTypeError(validationMessage) {}
