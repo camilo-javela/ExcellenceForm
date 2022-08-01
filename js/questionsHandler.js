@@ -954,6 +954,7 @@ function response() {
     Subject: "Completaste el test",
     Body: "te enviamos nuestros productos",
   });
+  sendResponses();
 }
 
 function sendEmail(email, objToSend) {
@@ -964,6 +965,17 @@ function sendEmail(email, objToSend) {
     Subject: objToSend.Subject,
     Body: "Hola," + " " + answers[0] + " " + objToSend.Body,
   }).then((message) => console.log(message));
+}
+
+function sendResponses() {
+  //https://script.google.com/macros/s/AKfycbw-1MBDxABAxQS8wq1EJs1DLqRJpGglUVjD_jMLhcdZ1kFOGb9g59ihovIF-CLR0OmT/exec
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbw-1MBDxABAxQS8wq1EJs1DLqRJpGglUVjD_jMLhcdZ1kFOGb9g59ihovIF-CLR0OmT/exec";
+  const form = document.forms["submit-to-google-sheet"];
+
+  // fetch(scriptURL, { method: "POST", body: new FormData(form) })
+  //   .then((response) => console.log("Success!", response))
+  //   .catch((error) => console.error("Error!", error.message));
 }
 
 function regexValidation(string, regexObject) {
