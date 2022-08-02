@@ -220,7 +220,7 @@ const validations = [
 ];
 
 const questions = {
-  ask: "Para empezar, por favor dinos cómo te llamas.",
+  ask: "Para empezar, por favor dinos cómo te llamas",
   direction: "",
   behavior: "",
   icon: "",
@@ -228,7 +228,7 @@ const questions = {
   type: "input",
   nextQuestions: [
     {
-      ask: "¿Cual es tu correo electronico? Para poder enviarte nuestras recomendaciones",
+      ask: "¿Cuál es tu correo electronico? Para poder enviarte nuestras recomendaciones",
       direction: "",
       behavior: "",
       icon: "",
@@ -265,7 +265,7 @@ const questions = {
                       behavior: "",
                       label:
                         "¿Estas embarazada o estás pensando quedarte embarazada?",
-                      icon: "fas fa-baby",
+                      icon: "fas fa-praying-hands",
                       validationType: "none",
                       type: "select",
                       nextQuestions: [
@@ -326,7 +326,7 @@ const questions = {
                       type: "select",
                       nextQuestions: [
                         {
-                          ask: "Si las he tomado",
+                          ask: "Si, las he tomado",
                           direction: "",
                           behavior: "",
                           label:
