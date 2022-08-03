@@ -875,7 +875,6 @@ function createInput(questionString, behavior, validationType) {
   }
 
   if (!localMainInput.innerHTML.includes("actualAnswer")) {
-    console.log("puta creo");
     mainInputTag.append(actualAnswerTag);
     mainInputTag.append(buttonTag);
   }
