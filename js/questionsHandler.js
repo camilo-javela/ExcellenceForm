@@ -709,7 +709,7 @@ function saveName() {
       document.getElementById("actualAnswer").style.display = "none";
 
       setTimeout(function () {
-        saveAnswer(answer, name);
+        saveAnswer(answer, name, "input");
       }, 3000);
     }, 1000);
   } else {
@@ -717,10 +717,15 @@ function saveName() {
   }
 }
 
-function saveAnswer(answer, writeAnswer) {
+function saveAnswer(answer, writeAnswer, type) {
   exitAnimation();
   setTimeout(function () {
-    writeAnswer ? answers.push(writeAnswer) : answers.push(answer);
+    if (type == "input") {
+      answers.push({ [answer]: writeAnswer });
+    } else {
+      answers.push({ [writeAnswer]: answer });
+    }
+
     deleteAllBlocks();
     const nextQuestionsToRenderize = nextQuestionsFinder(questions, answer);
     renderizeNextQuestions(nextQuestionsToRenderize);
@@ -822,7 +827,7 @@ function createSelect(questionString, label, icon, direction) {
       answer = e.target.lastChild.innerHTML;
     }
 
-    saveAnswer(answer);
+    saveAnswer(answer, label, "select");
   });
   localMainInput.appendChild(mainBlock);
 }
@@ -891,7 +896,7 @@ function createInput(questionString, behavior, validationType) {
         : true;
     if (resultValidation) {
       var answer = document.getElementById("actualQuestion").innerHTML;
-      saveAnswer(answer, writeAnswer);
+      saveAnswer(answer, writeAnswer, "input");
     } else {
       console.log("error");
     }
@@ -950,7 +955,17 @@ function findResponseArr(arr) {
 
 function response() {
   //aqui has lo que tengas que hacer para el form o como sea que quieras manejar las respuestas
-  sendEmail(answers[1], {
+  let email = "";
+  const emailVal = validations.find(({ type }) => type == "email");
+
+  answers.forEach((obj) => {
+    let key = Object.keys(obj)[0];
+    if (regexValidation(obj[key], emailVal) && obj[key].includes("@")) {
+      email = obj[key];
+    }
+  });
+
+  sendEmail(email, {
     Subject: "Completaste el test",
     Body: "te enviamos nuestros productos",
   });
@@ -987,3 +1002,5 @@ function regexValidation(string, regexObject) {
 }
 
 function inputTypeError(validationMessage) {}
+
+function createResponseForm() {}
