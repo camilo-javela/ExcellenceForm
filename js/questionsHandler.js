@@ -274,7 +274,7 @@ const questions = {
                           behavior: "",
                           label:
                             "¿Estas embarazada o estás pensando quedarte embarazada?",
-                          icon: "fas fa-praying-hands",
+                          icon: "fas fa-baby-carriage",
                           validationType: "none",
                           type: "select",
                           nextQuestions: [
@@ -328,7 +328,7 @@ const questions = {
                           ask: "Quiero quedarme embarazada",
                           direction: "column",
                           behavior: "",
-                          icon: "fas fa-baby-carriage",
+                          icon: "fas fa-praying-hands",
                           label:
                             "¿Estas embarazada o estás pensando quedarte embarazada?",
                           validationType: "none",
@@ -672,14 +672,23 @@ const questions = {
   ],
 };
 
+const landings = [
+  {
+    page: "",
+    url: "",
+  },
+];
+
 const emails = [
   {
+    name: "",
     Subject: "",
     Body: "",
   },
-  { Subject: "", Body: "" },
+  { name: "", Subject: "", Body: "" },
 ];
 
+let checked = false;
 let answers = [];
 let actualAnswerTag;
 let buttonTag;
@@ -704,10 +713,15 @@ function actualQuestion() {
     setTimeout(function () {
       document.getElementById("actualQuestion").innerHTML = questions.ask;
       document.getElementsByClassName("mainInput")[0].style.display = "flex";
-
+      document.getElementById("check").style.display = "block";
       entryAnimation();
     }, 1000);
   }, 3000);
+}
+
+function setChecked(element) {
+  checked = !checked;
+  element.checked = checked;
 }
 
 function entryAnimation() {
@@ -721,6 +735,7 @@ function exitAnimation() {
 }
 
 function saveName() {
+  checkTag = document.getElementById("check");
   var name = document.getElementById("actualAnswer").value;
   let resultValidation = regexValidation(
     name,
@@ -730,8 +745,10 @@ function saveName() {
       }
     })
   );
-  if (resultValidation) {
+  if (resultValidation && checked) {
+    checkTag.remove();
     var answer = document.getElementById("actualQuestion").innerHTML;
+
     exitAnimation();
     setTimeout(function () {
       document.getElementById("actualAnswer").value = "";

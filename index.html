@@ -44,9 +44,13 @@
                   <i class="fas fa-chevron-right" style="margin-left: 2px"></i>
                 </button>
               </div>
-              <!--<div>
-                <input type="checkbox" checked="checked">  
-              </div>-->
+              <div id="check" style="display: none">
+                <label class="checkLabel"
+                  >Acepto el tratamiento de mis datos personales
+                  <input type="checkbox" onchange="setChecked(this)" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
