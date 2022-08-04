@@ -279,7 +279,7 @@ const questions = {
                           type: "select",
                           nextQuestions: [
                             {
-                              ask: "Si.",
+                              ask: "Si ",
                               direction: "",
                               behavior: "",
                               label: "¿Estás tomando Vitaminas Prentales?",
@@ -296,12 +296,14 @@ const questions = {
                                     "Felicidades!!! has terminado el formulario",
                                   validationType: "none",
                                   type: "end",
+                                  page: "page2",
+                                  email: "",
                                   nextQuestions: [],
                                 },
                               ],
                             },
                             {
-                              ask: "No.",
+                              ask: "No ",
                               direction: "",
                               behavior: "",
                               label: "¿Estás tomando Vitaminas Prentales?",
@@ -318,6 +320,8 @@ const questions = {
                                     "Felicidades!!! has terminado el formulario",
                                   validationType: "none",
                                   type: "end",
+                                  page: "page1",
+                                  email: "",
                                   nextQuestions: [],
                                 },
                               ],
@@ -403,6 +407,8 @@ const questions = {
                                                         "Felicidades!!! has terminado el formulario",
                                                       validationType: "none",
                                                       type: "end",
+                                                      page: "",
+                                                      email: "",
                                                       nextQuestions: [],
                                                     },
                                                   ],
@@ -426,6 +432,8 @@ const questions = {
                                                         "Felicidades!!! has terminado el formulario",
                                                       validationType: "none",
                                                       type: "end",
+                                                      page: "",
+                                                      email: "",
                                                       nextQuestions: [],
                                                     },
                                                   ],
@@ -451,6 +459,8 @@ const questions = {
                                                     "Felicidades!!! has terminado el formulario",
                                                   validationType: "none",
                                                   type: "end",
+                                                  page: "page5",
+                                                  email: "",
                                                   nextQuestions: [],
                                                 },
                                               ],
@@ -474,6 +484,8 @@ const questions = {
                                                     "Felicidades!!! has terminado el formulario",
                                                   validationType: "none",
                                                   type: "end",
+                                                  page: "page5",
+                                                  email: "",
                                                   nextQuestions: [],
                                                 },
                                               ],
@@ -499,6 +511,8 @@ const questions = {
                                                 "Felicidades!!! has terminado el formulario",
                                               validationType: "none",
                                               type: "end",
+                                              page: "page4",
+                                              email: "",
                                               nextQuestions: [],
                                             },
                                           ],
@@ -524,6 +538,8 @@ const questions = {
                                             "Felicidades!!! has terminado el formulario",
                                           validationType: "none",
                                           type: "end",
+                                          page: "page3",
+                                          email: "",
                                           nextQuestions: [],
                                         },
                                       ],
@@ -559,6 +575,8 @@ const questions = {
                                             "Felicidades!!! has terminado el formulario",
                                           validationType: "none",
                                           type: "end",
+                                          page: "",
+                                          email: "",
                                           nextQuestions: [],
                                         },
                                       ],
@@ -582,6 +600,8 @@ const questions = {
                                             "Felicidades!!! has terminado el formulario",
                                           validationType: "none",
                                           type: "end",
+                                          page: "page3",
+                                          email: "",
                                           nextQuestions: [],
                                         },
                                       ],
@@ -609,6 +629,8 @@ const questions = {
                                     "Felicidades!!! has terminado el formulario",
                                   validationType: "none",
                                   type: "end",
+                                  page: "",
+                                  email: "",
                                   nextQuestions: [],
                                 },
                               ],
@@ -634,6 +656,8 @@ const questions = {
                                 "Felicidades!!! has terminado el formulario",
                               validationType: "none",
                               type: "end",
+                              page: "",
+                              email: "",
                               nextQuestions: [],
                             },
                           ],
@@ -665,6 +689,8 @@ const questions = {
           label: "Felicidades!!! has terminado el formulario",
           validationType: "none",
           type: "end",
+          page: "",
+          email: "",
           nextQuestions: [],
         },
       ],
@@ -674,8 +700,24 @@ const questions = {
 
 const landings = [
   {
-    page: "",
-    url: "",
+    page: "page1",
+    url: "./pages/page1.html",
+  },
+  {
+    page: "page2",
+    url: "./pages/page2.html",
+  },
+  {
+    page: "page3",
+    url: "./pages/page3.html",
+  },
+  {
+    page: "page4",
+    url: "./pages/page4.html",
+  },
+  {
+    page: "page5",
+    url: "./pages/page5.html",
   },
 ];
 
@@ -787,8 +829,28 @@ function saveAnswer(answer, writeAnswer, type) {
 
 function renderizeNextQuestions(questionsToRender) {
   questionsToRender.map(
-    ({ ask, type, label, icon, direction, behavior, validationType }) => {
-      createBlock(ask, type, label, icon, direction, behavior, validationType);
+    ({
+      ask,
+      type,
+      label,
+      icon,
+      direction,
+      behavior,
+      validationType,
+      page,
+      email,
+    }) => {
+      createBlock(
+        ask,
+        type,
+        label,
+        icon,
+        direction,
+        behavior,
+        validationType,
+        page,
+        email
+      );
     }
   );
   entryAnimation();
@@ -801,14 +863,16 @@ function createBlock(
   icon,
   direction,
   behavior,
-  validationType
+  validationType,
+  page,
+  email
 ) {
   if (type === "select") {
     createSelect(questionString, label, icon, direction);
   } else if (type === "input") {
     createInput(questionString, behavior, validationType);
   } else {
-    createEnd(questionString, label);
+    createEnd(questionString, label, page, email);
   }
 }
 
@@ -961,15 +1025,26 @@ function createInput(questionString, behavior, validationType) {
   };
 }
 
-function createEnd(finishMessage, FinishTitle) {
+function createEnd(finishMessage, FinishTitle, page, email) {
   var localMainInput = document.getElementsByClassName("mainInput")[0];
   if (localMainInput) {
     localMainInput.remove();
   }
   document.getElementsByClassName("container")[0].append(actualQuestionTag);
   document.getElementsByClassName("container")[0].append(mainInputTag);
-
+  let nameKey = Object.keys(answers[0])[0];
+  let objWithName = answers[0];
+  objWithName[nameKey];
   document.getElementById("actualQuestion").innerHTML = FinishTitle;
+  console.log(page);
+  console.log(landings.find((landing) => landing.page == page));
+  console.log(landings.find((landing) => landing.page == page).url);
+  setTimeout(() => {
+    location.href =
+      landings.find((landing) => landing.page == page).url +
+      "?name=" +
+      objWithName[nameKey];
+  }, 5000);
   response();
 }
 
