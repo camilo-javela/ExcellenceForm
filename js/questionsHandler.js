@@ -293,11 +293,11 @@ const questions = {
                                   behavior: "",
                                   icon: "",
                                   label:
-                                    "Felicidades!!! has terminado el formulario",
+                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                   validationType: "none",
                                   type: "end",
                                   page: "page2",
-                                  email: "",
+                                  email: "email2",
                                   nextQuestions: [],
                                 },
                               ],
@@ -317,11 +317,11 @@ const questions = {
                                   behavior: "",
                                   icon: "",
                                   label:
-                                    "Felicidades!!! has terminado el formulario",
+                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                   validationType: "none",
                                   type: "end",
                                   page: "page1",
-                                  email: "",
+                                  email: "email1",
                                   nextQuestions: [],
                                 },
                               ],
@@ -404,10 +404,10 @@ const questions = {
                                                       behavior: "",
                                                       icon: "fas fa-shish-kebab",
                                                       label:
-                                                        "Felicidades!!! has terminado el formulario",
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                                       validationType: "none",
                                                       type: "end",
-                                                      page: "",
+                                                      page: "default",
                                                       email: "",
                                                       nextQuestions: [],
                                                     },
@@ -429,11 +429,11 @@ const questions = {
                                                       behavior: "",
                                                       icon: "fas fa-shish-kebab",
                                                       label:
-                                                        "Felicidades!!! has terminado el formulario",
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                                       validationType: "none",
                                                       type: "end",
-                                                      page: "",
-                                                      email: "",
+                                                      page: "page5",
+                                                      email: "email5",
                                                       nextQuestions: [],
                                                     },
                                                   ],
@@ -456,11 +456,11 @@ const questions = {
                                                   behavior: "",
                                                   icon: "fas fa-shish-kebab",
                                                   label:
-                                                    "Felicidades!!! has terminado el formulario",
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                                   validationType: "none",
                                                   type: "end",
                                                   page: "page5",
-                                                  email: "",
+                                                  email: "email5",
                                                   nextQuestions: [],
                                                 },
                                               ],
@@ -481,11 +481,11 @@ const questions = {
                                                   behavior: "",
                                                   icon: "fas fa-shish-kebab",
                                                   label:
-                                                    "Felicidades!!! has terminado el formulario",
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                                   validationType: "none",
                                                   type: "end",
                                                   page: "page5",
-                                                  email: "",
+                                                  email: "email5",
                                                   nextQuestions: [],
                                                 },
                                               ],
@@ -508,11 +508,11 @@ const questions = {
                                               behavior: "",
                                               icon: "fas fa-shish-kebab",
                                               label:
-                                                "Felicidades!!! has terminado el formulario",
+                                                "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                               validationType: "none",
                                               type: "end",
                                               page: "page4",
-                                              email: "",
+                                              email: "email4",
                                               nextQuestions: [],
                                             },
                                           ],
@@ -535,11 +535,11 @@ const questions = {
                                           behavior: "",
                                           icon: "fas fa-shish-kebab",
                                           label:
-                                            "Felicidades!!! has terminado el formulario",
+                                            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                           validationType: "none",
                                           type: "end",
                                           page: "page3",
-                                          email: "",
+                                          email: "email3",
                                           nextQuestions: [],
                                         },
                                       ],
@@ -572,11 +572,11 @@ const questions = {
                                           behavior: "",
                                           icon: "fas fa-shish-kebab",
                                           label:
-                                            "Felicidades!!! has terminado el formulario",
+                                            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                           validationType: "none",
                                           type: "end",
-                                          page: "",
-                                          email: "",
+                                          page: "page5",
+                                          email: "email6",
                                           nextQuestions: [],
                                         },
                                       ],
@@ -597,11 +597,11 @@ const questions = {
                                           behavior: "",
                                           icon: "fas fa-shish-kebab",
                                           label:
-                                            "Felicidades!!! has terminado el formulario",
+                                            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                           validationType: "none",
                                           type: "end",
                                           page: "page3",
-                                          email: "",
+                                          email: "email3",
                                           nextQuestions: [],
                                         },
                                       ],
@@ -626,11 +626,11 @@ const questions = {
                                   behavior: "",
                                   icon: "fas fa-shish-kebab",
                                   label:
-                                    "Felicidades!!! has terminado el formulario",
+                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                   validationType: "none",
                                   type: "end",
-                                  page: "",
-                                  email: "",
+                                  page: "page5",
+                                  email: "email5",
                                   nextQuestions: [],
                                 },
                               ],
@@ -653,11 +653,11 @@ const questions = {
                               behavior: "",
                               icon: "",
                               label:
-                                "Felicidades!!! has terminado el formulario",
+                                "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                               validationType: "none",
                               type: "end",
                               page: "",
-                              email: "",
+                              email: "email6",
                               nextQuestions: [],
                             },
                           ],
@@ -686,10 +686,11 @@ const questions = {
           direction: "",
           behavior: "",
           icon: "",
-          label: "Felicidades!!! has terminado el formulario",
+          label:
+            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras pagina web.",
           validationType: "none",
           type: "end",
-          page: "",
+          page: "default",
           email: "",
           nextQuestions: [],
         },
@@ -719,15 +720,43 @@ const landings = [
     page: "page5",
     url: "./pages/page5.html",
   },
+  {
+    page: "default",
+    url: "https://buscandoembarazo.com/",
+  },
 ];
 
 const emails = [
   {
-    name: "",
-    Subject: "",
-    Body: "",
+    name: "email1",
+    Subject: "Tus recomendaciones por parte de excellence",
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page1.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
   },
-  { name: "", Subject: "", Body: "" },
+  {
+    name: "email2",
+    Subject: "Tus recomendaciones por parte de excellence",
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page2.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+  },
+  {
+    name: "email3",
+    Subject: "Tus recomendaciones por parte de excellence",
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page3.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+  },
+  {
+    name: "email4",
+    Subject: "Tus recomendaciones por parte de excellence",
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page4.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+  },
+  {
+    name: "email5",
+    Subject: "Tus recomendaciones por parte de excellence",
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page5.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+  },
+  {
+    name: "email6",
+    Subject: "Has completado el test",
+    Body: "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+  },
 ];
 
 let checked = false;
@@ -1039,13 +1068,16 @@ function createEnd(finishMessage, FinishTitle, page, email) {
   console.log(page);
   console.log(landings.find((landing) => landing.page == page));
   console.log(landings.find((landing) => landing.page == page).url);
+  console.log(1, email);
+  let emailObj = emails.find((mail) => mail.name == email);
+  console.log(2, emailObj);
+  response(emailObj);
   setTimeout(() => {
     location.href =
       landings.find((landing) => landing.page == page).url +
       "?name=" +
       objWithName[nameKey];
-  }, 5000);
-  response();
+  }, 10000);
 }
 
 function nextQuestionsFinder(questionObject, answer) {
@@ -1086,7 +1118,7 @@ function findResponseArr(arr) {
   }
 }
 
-function response() {
+function response(mailObj) {
   //aqui has lo que tengas que hacer para el form o como sea que quieras manejar las respuestas
   let email = "";
   const emailVal = validations.find(({ type }) => type == "email");
@@ -1098,20 +1130,21 @@ function response() {
     }
   });
 
-  sendEmail(email, {
-    Subject: "Completaste el test",
-    Body: "te enviamos nuestros productos",
-  });
+  sendEmail(email, mailObj);
   sendResponses();
 }
 
 function sendEmail(email, objToSend) {
+  let nameKey = Object.keys(answers[0])[0];
+  let objWithName = answers[0];
+  objWithName[nameKey];
+  console.log(objToSend.Body.replace("name", objWithName[nameKey]));
   Email.send({
     SecureToken: "0c1cc91b-b25a-4e1a-a95b-d8cf4f98befb",
     To: email,
     From: "javelav20151@gmail.com",
     Subject: objToSend.Subject,
-    Body: "Hola," + " " + answers[0] + " " + objToSend.Body,
+    Body: objToSend.Body.replace("name", objWithName[nameKey]),
   }).then((message) => console.log(message));
 }
 
