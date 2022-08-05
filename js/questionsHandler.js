@@ -349,47 +349,47 @@ const questions = {
                               type: "select",
                               nextQuestions: [
                                 {
-                                  ask: "Si, lo he hecho",
+                                  ask: "Si, he estado intentando",
                                   direction: "",
                                   behavior: "",
                                   label:
-                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                    "¿Llevas más de 6 meses intentando quedar embarazada? ",
                                   icon: "",
                                   validationType: "none",
                                   type: "select",
                                   nextQuestions: [
                                     {
-                                      ask: "Si, he estado intentando",
+                                      ask: "Claro ",
                                       direction: "",
                                       behavior: "",
                                       label:
-                                        "¿Llevas más de 6 meses intentando quedar embarazada?",
+                                        "¿Has consultado con tu ginecólogo acerca de este tema?",
                                       icon: "",
                                       validationType: "none",
                                       type: "select",
                                       nextQuestions: [
                                         {
-                                          ask: "Claro",
+                                          ask: "Si  ",
                                           direction: "",
                                           behavior: "",
-                                          label:
-                                            "¿Has consultado con tu ginecólogo acerca de este tema?",
                                           icon: "",
+                                          label:
+                                            "¿Has realizado pruebas de reserva ovárica?",
                                           validationType: "none",
                                           type: "select",
                                           nextQuestions: [
                                             {
-                                              ask: "Si.  ",
+                                              ask: " Si   ",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Has realizado pruebas de reserva ovárica?",
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
                                                 {
-                                                  ask: "Si.   ",
+                                                  ask: "Si    ",
                                                   direction: "",
                                                   behavior: "",
                                                   icon: "",
@@ -414,7 +414,7 @@ const questions = {
                                                   ],
                                                 },
                                                 {
-                                                  ask: "No.   ",
+                                                  ask: "No         ",
                                                   direction: "",
                                                   behavior: "",
                                                   icon: "",
@@ -441,12 +441,12 @@ const questions = {
                                               ],
                                             },
                                             {
-                                              ask: "No.  ",
+                                              ask: "Estoy esperando la transferencia embrionaria",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Has realizado pruebas de reserva ovárica?",
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -466,12 +466,12 @@ const questions = {
                                               ],
                                             },
                                             {
-                                              ask: "No lo sé.  ",
+                                              ask: "No   ",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Has realizado pruebas de reserva ovárica?",
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -493,12 +493,12 @@ const questions = {
                                           ],
                                         },
                                         {
-                                          ask: "Por el momento no",
+                                          ask: "No  ",
                                           direction: "",
                                           behavior: "",
-                                          label:
-                                            "¿Has consultado con tu ginecólogo acerca de este tema?",
                                           icon: "",
+                                          label:
+                                            "¿Has realizado pruebas de reserva ovárica?",
                                           validationType: "none",
                                           type: "select",
                                           nextQuestions: [
@@ -511,20 +511,144 @@ const questions = {
                                                 "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                               validationType: "none",
                                               type: "end",
-                                              page: "page4",
-                                              email: "email4",
+                                              page: "page5",
+                                              email: "email5",
                                               nextQuestions: [],
+                                            },
+                                          ],
+                                        },
+                                        {
+                                          ask: "No lo sé  ",
+                                          direction: "",
+                                          behavior: "",
+                                          icon: "",
+                                          label:
+                                            "¿Has realizado pruebas de reserva ovárica?",
+                                          validationType: "none",
+                                          type: "select",
+                                          nextQuestions: [
+                                            {
+                                              ask: " Si   ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Si       ",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "",
+                                                  label:
+                                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                                  validationType: "none",
+                                                  type: "select",
+                                                  nextQuestions: [
+                                                    {
+                                                      ask: "Formulario finalizado",
+                                                      direction: "",
+                                                      behavior: "",
+                                                      icon: "fas fa-shish-kebab",
+                                                      label:
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                      validationType: "none",
+                                                      type: "end",
+                                                      page: "default",
+                                                      email: "",
+                                                      nextQuestions: [],
+                                                    },
+                                                  ],
+                                                },
+                                                {
+                                                  ask: "No    ",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "",
+                                                  label:
+                                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                                  validationType: "none",
+                                                  type: "select",
+                                                  nextQuestions: [
+                                                    {
+                                                      ask: "Formulario finalizado",
+                                                      direction: "",
+                                                      behavior: "",
+                                                      icon: "fas fa-shish-kebab",
+                                                      label:
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                      validationType: "none",
+                                                      type: "end",
+                                                      page: "page5",
+                                                      email: "email5",
+                                                      nextQuestions: [],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                            {
+                                              ask: "Estoy esperando la transferencia embrionaria    ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Formulario finalizado",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "fas fa-shish-kebab",
+                                                  label:
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                  validationType: "none",
+                                                  type: "end",
+                                                  page: "page5",
+                                                  email: "email5",
+                                                  nextQuestions: [],
+                                                },
+                                              ],
+                                            },
+                                            {
+                                              ask: "No        ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Formulario finalizado",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "fas fa-shish-kebab",
+                                                  label:
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                  validationType: "none",
+                                                  type: "end",
+                                                  page: "page5",
+                                                  email: "email5",
+                                                  nextQuestions: [],
+                                                },
+                                              ],
                                             },
                                           ],
                                         },
                                       ],
                                     },
                                     {
-                                      ask: "No. ",
+                                      ask: "Por el momento no",
                                       direction: "",
                                       behavior: "",
                                       label:
-                                        "¿Llevas más de 6 meses intentando quedar embarazada?",
+                                        "¿Has consultado con tu ginecólogo acerca de este tema?",
                                       icon: "",
                                       validationType: "none",
                                       type: "select",
@@ -538,8 +662,8 @@ const questions = {
                                             "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                           validationType: "none",
                                           type: "end",
-                                          page: "page3",
-                                          email: "email3",
+                                          page: "page4",
+                                          email: "email4",
                                           nextQuestions: [],
                                         },
                                       ],
@@ -547,64 +671,27 @@ const questions = {
                                   ],
                                 },
                                 {
-                                  ask: "No.",
+                                  ask: "No. ",
                                   direction: "",
                                   behavior: "",
                                   label:
-                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                    "¿Llevas más de 6 meses intentando quedar embarazada?    ",
                                   icon: "",
                                   validationType: "none",
                                   type: "select",
                                   nextQuestions: [
                                     {
-                                      ask: "Si, lo he estado intentando",
+                                      ask: "Formulario finalizado",
                                       direction: "",
                                       behavior: "",
+                                      icon: "fas fa-shish-kebab",
                                       label:
-                                        "¿Llevas más de 6 meses intentando quedar embarazada?",
-                                      icon: "",
+                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
                                       validationType: "none",
-                                      type: "select",
-                                      nextQuestions: [
-                                        {
-                                          ask: "Formulario finalizado",
-                                          direction: "",
-                                          behavior: "",
-                                          icon: "fas fa-shish-kebab",
-                                          label:
-                                            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
-                                          validationType: "none",
-                                          type: "end",
-                                          page: "page5",
-                                          email: "email6",
-                                          nextQuestions: [],
-                                        },
-                                      ],
-                                    },
-                                    {
-                                      ask: "No lo he estado intentando",
-                                      direction: "",
-                                      behavior: "",
-                                      label:
-                                        "¿Llevas más de 6 meses intentando quedar embarazada?",
-                                      icon: "",
-                                      validationType: "none",
-                                      type: "select",
-                                      nextQuestions: [
-                                        {
-                                          ask: "Formulario finalizado",
-                                          direction: "",
-                                          behavior: "",
-                                          icon: "fas fa-shish-kebab",
-                                          label:
-                                            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
-                                          validationType: "none",
-                                          type: "end",
-                                          page: "page3",
-                                          email: "email3",
-                                          nextQuestions: [],
-                                        },
-                                      ],
+                                      type: "end",
+                                      page: "page3",
+                                      email: "email3",
+                                      nextQuestions: [],
                                     },
                                   ],
                                 },
@@ -621,17 +708,351 @@ const questions = {
                               type: "select",
                               nextQuestions: [
                                 {
-                                  ask: "Formulario finalizado",
+                                  ask: "Si, he estado intentando ",
                                   direction: "",
                                   behavior: "",
-                                  icon: "fas fa-shish-kebab",
                                   label:
-                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                    "¿Llevas más de 6 meses intentando quedar embarazada?   ",
+                                  icon: "",
                                   validationType: "none",
-                                  type: "end",
-                                  page: "page5",
-                                  email: "email5",
-                                  nextQuestions: [],
+                                  type: "select",
+                                  nextQuestions: [
+                                    {
+                                      ask: "Claro",
+                                      direction: "",
+                                      behavior: "",
+                                      label:
+                                        "¿Has consultado con tu ginecólogo acerca de este tema?",
+                                      icon: "",
+                                      validationType: "none",
+                                      type: "select",
+                                      nextQuestions: [
+                                        {
+                                          ask: "Si   ",
+                                          direction: "",
+                                          behavior: "",
+                                          icon: "",
+                                          label:
+                                            "¿Has realizado pruebas de reserva ovárica?",
+                                          validationType: "none",
+                                          type: "select",
+                                          nextQuestions: [
+                                            {
+                                              ask: "Si     ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Si      ",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "",
+                                                  label:
+                                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                                  validationType: "none",
+                                                  type: "select",
+                                                  nextQuestions: [
+                                                    {
+                                                      ask: "Formulario finalizado",
+                                                      direction: "",
+                                                      behavior: "",
+                                                      icon: "fas fa-shish-kebab",
+                                                      label:
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                      validationType: "none",
+                                                      type: "end",
+                                                      page: "default",
+                                                      email: "",
+                                                      nextQuestions: [],
+                                                    },
+                                                  ],
+                                                },
+                                                {
+                                                  ask: "No       ",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "",
+                                                  label:
+                                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                                  validationType: "none",
+                                                  type: "select",
+                                                  nextQuestions: [
+                                                    {
+                                                      ask: "Formulario finalizado",
+                                                      direction: "",
+                                                      behavior: "",
+                                                      icon: "fas fa-shish-kebab",
+                                                      label:
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                      validationType: "none",
+                                                      type: "end",
+                                                      page: "page5",
+                                                      email: "email5",
+                                                      nextQuestions: [],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                            {
+                                              ask: "Estoy esperando la transferencia embrionaria ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Formulario finalizado",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "fas fa-shish-kebab",
+                                                  label:
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                  validationType: "none",
+                                                  type: "end",
+                                                  page: "page5",
+                                                  email: "email5",
+                                                  nextQuestions: [],
+                                                },
+                                              ],
+                                            },
+                                            {
+                                              ask: "No      ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Formulario finalizado",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "fas fa-shish-kebab",
+                                                  label:
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                  validationType: "none",
+                                                  type: "end",
+                                                  page: "page5",
+                                                  email: "email5",
+                                                  nextQuestions: [],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                        {
+                                          ask: "No     ",
+                                          direction: "",
+                                          behavior: "",
+                                          icon: "",
+                                          label:
+                                            "¿Has realizado pruebas de reserva ovárica?",
+                                          validationType: "none",
+                                          type: "select",
+                                          nextQuestions: [
+                                            {
+                                              ask: "Formulario finalizado",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "fas fa-shish-kebab",
+                                              label:
+                                                "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                              validationType: "none",
+                                              type: "end",
+                                              page: "page5",
+                                              email: "email5",
+                                              nextQuestions: [],
+                                            },
+                                          ],
+                                        },
+                                        {
+                                          ask: "No lo sé   ",
+                                          direction: "",
+                                          behavior: "",
+                                          icon: "",
+                                          label:
+                                            "¿Has realizado pruebas de reserva ovárica?",
+                                          validationType: "none",
+                                          type: "select",
+                                          nextQuestions: [
+                                            {
+                                              ask: "Si        ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Si          ",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "",
+                                                  label:
+                                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                                  validationType: "none",
+                                                  type: "select",
+                                                  nextQuestions: [
+                                                    {
+                                                      ask: "Formulario finalizado",
+                                                      direction: "",
+                                                      behavior: "",
+                                                      icon: "fas fa-shish-kebab",
+                                                      label:
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                      validationType: "none",
+                                                      type: "end",
+                                                      page: "default",
+                                                      email: "",
+                                                      nextQuestions: [],
+                                                    },
+                                                  ],
+                                                },
+                                                {
+                                                  ask: "No    ",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "",
+                                                  label:
+                                                    "¿Has realizado algún ciclo de reproducción asistida en el que hayas obtenido menos de 6 óvulos o has sido diagnosticada como baja respondedora?",
+                                                  validationType: "none",
+                                                  type: "select",
+                                                  nextQuestions: [
+                                                    {
+                                                      ask: "Formulario finalizado",
+                                                      direction: "",
+                                                      behavior: "",
+                                                      icon: "fas fa-shish-kebab",
+                                                      label:
+                                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                      validationType: "none",
+                                                      type: "end",
+                                                      page: "page5",
+                                                      email: "email5",
+                                                      nextQuestions: [],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                            {
+                                              ask: "Estoy esperando la transferencia embrionaria  ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Formulario finalizado",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "fas fa-shish-kebab",
+                                                  label:
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                  validationType: "none",
+                                                  type: "end",
+                                                  page: "page5",
+                                                  email: "email5",
+                                                  nextQuestions: [],
+                                                },
+                                              ],
+                                            },
+                                            {
+                                              ask: "No          ",
+                                              direction: "",
+                                              behavior: "",
+                                              icon: "",
+                                              label:
+                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                              validationType: "none",
+                                              type: "select",
+                                              nextQuestions: [
+                                                {
+                                                  ask: "Formulario finalizado",
+                                                  direction: "",
+                                                  behavior: "",
+                                                  icon: "fas fa-shish-kebab",
+                                                  label:
+                                                    "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                                  validationType: "none",
+                                                  type: "end",
+                                                  page: "page5",
+                                                  email: "email5",
+                                                  nextQuestions: [],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                    },
+                                    {
+                                      ask: "Por el momento no",
+                                      direction: "",
+                                      behavior: "",
+                                      label:
+                                        "¿Has consultado con tu ginecólogo acerca de este tema?",
+                                      icon: "",
+                                      validationType: "none",
+                                      type: "select",
+                                      nextQuestions: [
+                                        {
+                                          ask: "Formulario finalizado",
+                                          direction: "",
+                                          behavior: "",
+                                          icon: "fas fa-shish-kebab",
+                                          label:
+                                            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                          validationType: "none",
+                                          type: "end",
+                                          page: "page4",
+                                          email: "email4",
+                                          nextQuestions: [],
+                                        },
+                                      ],
+                                    },
+                                  ],
+                                },
+                                {
+                                  ask: "No. ",
+                                  direction: "",
+                                  behavior: "",
+                                  label:
+                                    "¿Llevas más de 6 meses intentando quedar embarazada?  ",
+                                  icon: "",
+                                  validationType: "none",
+                                  type: "select",
+                                  nextQuestions: [
+                                    {
+                                      ask: "Formulario finalizado",
+                                      direction: "",
+                                      behavior: "",
+                                      icon: "fas fa-shish-kebab",
+                                      label:
+                                        "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras recomendaciones",
+                                      validationType: "none",
+                                      type: "end",
+                                      page: "page3",
+                                      email: "email3",
+                                      nextQuestions: [],
+                                    },
+                                  ],
                                 },
                               ],
                             },
