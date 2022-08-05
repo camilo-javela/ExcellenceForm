@@ -237,7 +237,7 @@ const questions = {
       type: "select",
       nextQuestions: [
         {
-          ask: "¿Cuál es tu correo electronico? Para poder enviarte nuestras recomendaciones",
+          ask: "¿Cuál es tu correo electrónico? Para poder enviarte nuestras recomendaciones",
           direction: "",
           behavior: "",
           icon: "",
@@ -245,7 +245,7 @@ const questions = {
           type: "input",
           nextQuestions: [
             {
-              ask: "¿En que país vives?",
+              ask: "¿En qué país vives?",
               direction: "",
               behavior: "autocomplete",
               icon: "",
@@ -273,7 +273,7 @@ const questions = {
                           direction: "column",
                           behavior: "",
                           label:
-                            "¿Estas embarazada o estás pensando quedarte embarazada?",
+                            "¿Estás embarazada o estás pensando quedarte embarazada?",
                           icon: "fas fa-baby-carriage",
                           validationType: "none",
                           type: "select",
@@ -730,27 +730,27 @@ const emails = [
   {
     name: "email1",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page1.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page1.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
   },
   {
     name: "email2",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page2.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page2.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
   },
   {
     name: "email3",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page3.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page3.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
   },
   {
     name: "email4",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page4.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page4.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
   },
   {
     name: "email5",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://6372-186-168-127-250.ngrok.io/pages/page5.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page5.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
   },
   {
     name: "email6",
@@ -845,9 +845,9 @@ function saveAnswer(answer, writeAnswer, type) {
   exitAnimation();
   setTimeout(function () {
     if (type == "input") {
-      answers.push({ [answer]: writeAnswer });
+      answers.push({ [answer]: writeAnswer, type: type });
     } else {
-      answers.push({ [writeAnswer]: answer });
+      answers.push({ [writeAnswer]: answer, type: type });
     }
 
     deleteAllBlocks();
@@ -988,7 +988,8 @@ function createInput(questionString, behavior, validationType) {
     mainInputTag.append(actualAnswerTag);
     mainInputTag.append(buttonTag);
   }
-
+  mainInputTag.style.flexDirection = "row";
+  mainInputTag.style.alignItems = "baseline";
   document.getElementsByClassName("container")[0].append(actualQuestionTag);
   document.getElementsByClassName("container")[0].append(mainInputTag);
   document.getElementById("actualAnswer").value = "";
@@ -1077,7 +1078,7 @@ function createEnd(finishMessage, FinishTitle, page, email) {
       landings.find((landing) => landing.page == page).url +
       "?name=" +
       objWithName[nameKey];
-  }, 10000);
+  }, 3000);
 }
 
 function nextQuestionsFinder(questionObject, answer) {
@@ -1165,6 +1166,37 @@ function regexValidation(string, regexObject) {
     countries.some((country) => string === country);
   if (!isCorrect) inputTypeError(regexObject.message);
   return isCorrect;
+}
+
+function goBackHandler() {
+  if (answers.length > 1) {
+    exitAnimation();
+    setTimeout(function () {
+      deleteAllBlocks();
+      console.log(answers);
+      let questionBack = answers[answers.length - 2];
+      console.log(questionBack);
+      console.log(Object.keys(questionBack)[0]);
+      let questionKey = Object.keys(questionBack)[0];
+      answers.pop();
+      var actualAnswer = document.getElementById("actualAnswer");
+      if (!actualAnswer) {
+        document.getElementById("actualAnswerautocomplete")
+          ? (document.getElementById("actualAnswerautocomplete").id =
+              "actualAnswer")
+          : undefined;
+      }
+      console.log(answers);
+      const nextQuestionsToRenderize = nextQuestionsFinder(
+        questions,
+        questionBack.type == "input" ? questionKey : questionBack[questionKey]
+      );
+      console.log(nextQuestionsToRenderize);
+      renderizeNextQuestions(nextQuestionsToRenderize);
+    }, 1000);
+  } else {
+    location.reload();
+  }
 }
 
 function inputTypeError(validationMessage) {}
