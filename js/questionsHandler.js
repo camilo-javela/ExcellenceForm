@@ -1377,7 +1377,7 @@ function createSelect(questionString, label, icon, direction) {
   mainBlock.append(question);
   localMainInput.style.flexDirection = direction != "column" ? "row" : "column";
   localMainInput.style.alignItems =
-    direction != "column" ? "baseline" : "center";
+    direction != "column" ? "flex-start" : "center";
   localMainInput.style.flexWrap = "nowrap";
   if (direction == "column") {
     mainBlock.style.marginTop = "10px";
@@ -1487,25 +1487,33 @@ function createEnd(finishMessage, FinishTitle, page, email) {
   if (localMainInput) {
     localMainInput.remove();
   }
-  document.getElementsByClassName("container")[0].append(actualQuestionTag);
-  document.getElementsByClassName("container")[0].append(mainInputTag);
   let nameKey = Object.keys(answers[0])[0];
   let objWithName = answers[0];
   objWithName[nameKey];
+  let redirectBtn = document.createElement("button");
+  redirectBtn.className = "block";
+  redirectBtn.innerHTML = "Ver recomendaciones";
+  redirectBtn.onclick = () => {
+    location.href =
+      landings.find((landing) => landing.page == page).url +
+      "?name=" +
+      objWithName[nameKey];
+  };
+  mainInputTag.append(redirectBtn);
+  document.getElementsByClassName("container")[0].append(actualQuestionTag);
+  document.getElementsByClassName("container")[0].append(mainInputTag);
+
   document.getElementById("actualQuestion").innerHTML = FinishTitle;
-  console.log(page);
-  console.log(landings.find((landing) => landing.page == page));
-  console.log(landings.find((landing) => landing.page == page).url);
-  console.log(1, email);
+
   let emailObj = emails.find((mail) => mail.name == email);
-  console.log(2, emailObj);
+
   response(emailObj);
   setTimeout(() => {
     location.href =
       landings.find((landing) => landing.page == page).url +
       "?name=" +
       objWithName[nameKey];
-  }, 6000);
+  }, 300000);
 }
 
 function nextQuestionsFinder(questionObject, answer) {
@@ -1629,3 +1637,10 @@ function goBackHandler() {
 function inputTypeError(validationMessage) {}
 
 function createResponseForm() {}
+
+function reloadPage() {
+  if (confirm("¿Deseas comenzar de nuevo el test?")) {
+    location.reload();
+  } else {
+  }
+}
