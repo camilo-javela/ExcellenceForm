@@ -279,7 +279,7 @@ const questions = {
                           type: "select",
                           nextQuestions: [
                             {
-                              ask: "Si ",
+                              ask: "Sí ",
                               direction: "",
                               behavior: "",
                               label: "¿Estás tomando Vitaminas Prentales?",
@@ -339,7 +339,7 @@ const questions = {
                           type: "select",
                           nextQuestions: [
                             {
-                              ask: "Si",
+                              ask: "Sí",
                               direction: "",
                               behavior: "",
                               label:
@@ -349,7 +349,7 @@ const questions = {
                               type: "select",
                               nextQuestions: [
                                 {
-                                  ask: " Si ",
+                                  ask: " Sí ",
                                   direction: "",
                                   behavior: "",
                                   label:
@@ -359,7 +359,7 @@ const questions = {
                                   type: "select",
                                   nextQuestions: [
                                     {
-                                      ask: "  Si  ",
+                                      ask: "  Sí  ",
                                       direction: "",
                                       behavior: "",
                                       label:
@@ -369,7 +369,7 @@ const questions = {
                                       type: "select",
                                       nextQuestions: [
                                         {
-                                          ask: "Si  ",
+                                          ask: "Sí  ",
                                           direction: "",
                                           behavior: "",
                                           icon: "",
@@ -379,7 +379,7 @@ const questions = {
                                           type: "select",
                                           nextQuestions: [
                                             {
-                                              ask: " Si    ",
+                                              ask: " Sí    ",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
@@ -389,7 +389,7 @@ const questions = {
                                               type: "select",
                                               nextQuestions: [
                                                 {
-                                                  ask: "Si    ",
+                                                  ask: "Sí    ",
                                                   direction: "",
                                                   behavior: "",
                                                   icon: "",
@@ -528,7 +528,7 @@ const questions = {
                                           type: "select",
                                           nextQuestions: [
                                             {
-                                              ask: " Si   ",
+                                              ask: " Sí   ",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
@@ -538,7 +538,7 @@ const questions = {
                                               type: "select",
                                               nextQuestions: [
                                                 {
-                                                  ask: "Si       ",
+                                                  ask: "Sí       ",
                                                   direction: "",
                                                   behavior: "",
                                                   icon: "",
@@ -708,7 +708,7 @@ const questions = {
                               type: "select",
                               nextQuestions: [
                                 {
-                                  ask: "   Si   ",
+                                  ask: "   Sí   ",
                                   direction: "",
                                   behavior: "",
                                   label:
@@ -718,7 +718,7 @@ const questions = {
                                   type: "select",
                                   nextQuestions: [
                                     {
-                                      ask: "  Si ",
+                                      ask: "  Sí ",
                                       direction: "",
                                       behavior: "",
                                       label:
@@ -728,7 +728,7 @@ const questions = {
                                       type: "select",
                                       nextQuestions: [
                                         {
-                                          ask: "Si   ",
+                                          ask: "Sí   ",
                                           direction: "",
                                           behavior: "",
                                           icon: "",
@@ -738,7 +738,7 @@ const questions = {
                                           type: "select",
                                           nextQuestions: [
                                             {
-                                              ask: "Si     ",
+                                              ask: "Sí     ",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
@@ -748,7 +748,7 @@ const questions = {
                                               type: "select",
                                               nextQuestions: [
                                                 {
-                                                  ask: "Si      ",
+                                                  ask: "Sí      ",
                                                   direction: "",
                                                   behavior: "",
                                                   icon: "",
@@ -887,7 +887,7 @@ const questions = {
                                           type: "select",
                                           nextQuestions: [
                                             {
-                                              ask: "Si        ",
+                                              ask: "Sí        ",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
@@ -897,7 +897,7 @@ const questions = {
                                               type: "select",
                                               nextQuestions: [
                                                 {
-                                                  ask: "Si          ",
+                                                  ask: "Sí          ",
                                                   direction: "",
                                                   behavior: "",
                                                   icon: "",
