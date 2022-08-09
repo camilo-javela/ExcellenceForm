@@ -339,7 +339,7 @@ const questions = {
                           type: "select",
                           nextQuestions: [
                             {
-                              ask: "Si, las he tomado",
+                              ask: "Si",
                               direction: "",
                               behavior: "",
                               label:
@@ -349,7 +349,7 @@ const questions = {
                               type: "select",
                               nextQuestions: [
                                 {
-                                  ask: "Si, he estado intentando",
+                                  ask: " Si ",
                                   direction: "",
                                   behavior: "",
                                   label:
@@ -359,7 +359,7 @@ const questions = {
                                   type: "select",
                                   nextQuestions: [
                                     {
-                                      ask: "Claro ",
+                                      ask: "  Si  ",
                                       direction: "",
                                       behavior: "",
                                       label:
@@ -379,7 +379,7 @@ const questions = {
                                           type: "select",
                                           nextQuestions: [
                                             {
-                                              ask: " Si   ",
+                                              ask: " Si    ",
                                               direction: "",
                                               behavior: "",
                                               icon: "",
@@ -563,7 +563,7 @@ const questions = {
                                                   ],
                                                 },
                                                 {
-                                                  ask: "No    ",
+                                                  ask: " No ",
                                                   direction: "",
                                                   behavior: "",
                                                   icon: "",
@@ -644,7 +644,7 @@ const questions = {
                                       ],
                                     },
                                     {
-                                      ask: "Por el momento no",
+                                      ask: "No",
                                       direction: "",
                                       behavior: "",
                                       label:
@@ -671,7 +671,7 @@ const questions = {
                                   ],
                                 },
                                 {
-                                  ask: "No. ",
+                                  ask: " No  ",
                                   direction: "",
                                   behavior: "",
                                   label:
@@ -698,7 +698,7 @@ const questions = {
                               ],
                             },
                             {
-                              ask: "No las he tomado",
+                              ask: "  No  ",
                               direction: "",
                               behavior: "",
                               label:
@@ -708,7 +708,7 @@ const questions = {
                               type: "select",
                               nextQuestions: [
                                 {
-                                  ask: "Si, he estado intentando ",
+                                  ask: "   Si   ",
                                   direction: "",
                                   behavior: "",
                                   label:
@@ -718,7 +718,7 @@ const questions = {
                                   type: "select",
                                   nextQuestions: [
                                     {
-                                      ask: "Claro",
+                                      ask: "  Si ",
                                       direction: "",
                                       behavior: "",
                                       label:
@@ -1003,7 +1003,7 @@ const questions = {
                                       ],
                                     },
                                     {
-                                      ask: "Por el momento no",
+                                      ask: "No            ",
                                       direction: "",
                                       behavior: "",
                                       label:
@@ -1030,7 +1030,7 @@ const questions = {
                                   ],
                                 },
                                 {
-                                  ask: "No. ",
+                                  ask: "No           ",
                                   direction: "",
                                   behavior: "",
                                   label:
@@ -1108,11 +1108,11 @@ const questions = {
           behavior: "",
           icon: "",
           label:
-            "Has terminado el formulario satisfactoriamente.\n A continuacion te presentaremos nuestras pagina web.",
+            "<strong>¡Gracias por visitarnos!</strong><br></br> En este momento estamos preparando nuestro nuevo producto para fertilidad masculina y estará  muy pronto en nuestra tienda.",
           validationType: "none",
           type: "end",
           page: "default",
-          email: "",
+          email: "man",
           nextQuestions: [],
         },
       ],
@@ -1177,6 +1177,12 @@ const emails = [
     name: "email6",
     Subject: "Has completado el test",
     Body: "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+  },
+
+  {
+    name: "man",
+    Subject: "Has completado el test",
+    Body: "Gracias por visitarnos.<br></br> En este momento estamos preparando nuestro nuevo producto para fertilidad masculina y estará  muy pronto en nuestra tienda.",
   },
 ];
 
@@ -1499,7 +1505,7 @@ function createEnd(finishMessage, FinishTitle, page, email) {
       landings.find((landing) => landing.page == page).url +
       "?name=" +
       objWithName[nameKey];
-  }, 3000);
+  }, 6000);
 }
 
 function nextQuestionsFinder(questionObject, answer) {
