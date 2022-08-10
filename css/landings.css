@@ -233,6 +233,7 @@ p {
   z-index: 1;
   top: 25px;
   right: 20px;
+  color: #dcb8c4;
   position: absolute;
   cursor: pointer;
   flex-grow: 1;
@@ -247,12 +248,13 @@ p {
   border-radius: 50px;
   border-width: 2px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.425);
+  border-color: #dcb8c4;
   transition: 0.1s;
-  background-color: rgba(230, 233, 36, 0.2);
+  background-color: rgb(255, 255, 255);
 }
 
 .buy:hover {
   border-style: solid;
-  border-color: Black;
+  border-color: #f5b1c8;
+  color: #f5b1c8;
 }
