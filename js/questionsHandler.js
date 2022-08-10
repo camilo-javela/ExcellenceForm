@@ -1602,12 +1602,14 @@ function sendEmail(email, objToSend) {
   objWithName[nameKey];
   console.log(objToSend.Body.replace("name", objWithName[nameKey]));
   Email.send({
-    SecureToken: "0c1cc91b-b25a-4e1a-a95b-d8cf4f98befb",
+    SecureToken: "5d94d4f6-080c-4d86-85be-dce3e58a9347",
     To: email,
-    From: "javelav20151@gmail.com",
+    From: "excellencefertility@gmail.com",
     Subject: objToSend.Subject,
     Body: objToSend.Body.replace("name", objWithName[nameKey]),
   }).then((message) => console.log(message));
+  //AF24717D2007B52B2320833D4772F74041FF;
+  //backuo code: 733589
 }
 
 function sendResponses() {
