@@ -177,10 +177,10 @@ p {
 .Prod2-image {
   border-radius: 15px 15px 0 0;
   padding-bottom: 20px;
-  background-color: #dcb8c4;
+  /*background-color: #dcb8c4;*/
   width: 100%;
-  height: 65%;
-  background-image: url("./../assets/img/Bajas.png");
+  height: 44%;
+  background-image: url("./../assets/img/Bajas_2.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
