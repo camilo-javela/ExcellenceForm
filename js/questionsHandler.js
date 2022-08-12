@@ -1163,52 +1163,97 @@ const emails = [
   {
     name: "email0",
     Subject: "Has completado el test",
-    Body: "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    BodyTitle: "Hola name",
+    message:
+      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    buttonMessage: "Visita nuestra página!",
+    buttonLink: "https://buscandoembarazo.com/",
   },
   {
     name: "email1",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page1.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    BodyTitle: "Excellence.",
+    message:
+      "Hola, name \nDe acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti ",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page1.html?namePlaceholder=name",
   },
   {
     name: "email2",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page2.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    BodyTitle: "Excellence",
+    message:
+      "Hola, name \nDe acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page2.html?namePlaceholder=name",
   },
   {
     name: "email3",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page3.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    BodyTitle: "Excellence.",
+    message:
+      "Hola, name\n De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page3.html?namePlaceholder=name",
   },
   {
     name: "email4",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page4.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    BodyTitle: "Excellence.",
+    message:
+      "Hola, name \nDe acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page4.html?namePlaceholder=name",
   },
   {
     name: "email5",
     Subject: "Tus recomendaciones por parte de excellence",
-    Body: '<html><h2>Excellence</h2><strong>Hola, name</strong><br></br><p>De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti<p><a href="https://12c8-186-168-127-250.ngrok.io/pages/page5.html?namePlaceholder=name" style=" background-color: #dcb8c4;border-radius:15px;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;">Tus recomendaciones</a></html>',
+    BodyTitle: "Excellence",
+    message:
+      "Hola, name. \n De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page5.html?namePlaceholder=name",
   },
   {
     name: "email6",
     Subject: "Has completado el test",
-    Body: "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    BodyTitle: "Hola name",
+    message:
+      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    buttonMessage: "Visita nuestra página!",
+    buttonLink: "https://buscandoembarazo.com/",
   },
   {
     name: "email7",
     Subject: "Has completado el test",
-    Body: "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    BodyTitle: "Hola name",
+    message:
+      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    buttonMessage: "",
+    buttonLink: "",
   },
   {
     name: "email8",
     Subject: "Has completado el test",
-    Body: "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    BodyTitle: "Hola name",
+    message:
+      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
+    buttonMessage: "",
+    buttonLink: "",
   },
   {
     name: "man",
     Subject: "Has completado el test",
-    Body: "Gracias por visitarnos.<br></br> En este momento estamos preparando nuestro nuevo producto para fertilidad masculina y estará  muy pronto en nuestra tienda.",
+    BodyTitle: "Hola name",
+    message:
+      "Gracias por visitarnos. En este momento estamos preparando nuestro nuevo producto para fertilidad masculina y estará  muy pronto en nuestra tienda.",
+    buttonMessage: "Visita nuestra página!",
+    buttonLink: "https://buscandoembarazo.com/",
   },
 ];
 
@@ -1600,16 +1645,32 @@ function sendEmail(email, objToSend) {
   let nameKey = Object.keys(answers[0])[0];
   let objWithName = answers[0];
   objWithName[nameKey];
-  console.log(objToSend.Body.replace("name", objWithName[nameKey]));
-  Email.send({
-    SecureToken: "5d94d4f6-080c-4d86-85be-dce3e58a9347",
-    To: email,
-    From: "excellencefertility@gmail.com",
-    Subject: objToSend.Subject,
-    Body: objToSend.Body.replace("name", objWithName[nameKey]),
-  }).then((message) => console.log(message));
-  //AF24717D2007B52B2320833D4772F74041FF;
-  //backuo code: 733589
+
+  var templateParams = {
+    message: objToSend.message.replace("name", objWithName[nameKey]),
+    button_link: objToSend.buttonLink.replace("name", objWithName[nameKey]),
+    button_message: objToSend.buttonMessage,
+    subject: objToSend.Subject,
+    body_title: objToSend.BodyTitle.replace("name", objWithName[nameKey]),
+    email: email,
+    name: objWithName[nameKey],
+  };
+
+  emailjs
+    .send(
+      "service_pvlmw6p",
+      "template_92epc7o",
+      templateParams,
+      "PJ7D_wGTRedtfY9ap"
+    )
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
 }
 
 function sendResponses() {
