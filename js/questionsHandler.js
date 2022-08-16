@@ -1077,7 +1077,7 @@ const questions = {
                                 "Gracias por contestar nuestras preguntas.<br></br> Te presentamos las recomendaciones de nuestros expertos:",
                               validationType: "none",
                               type: "end",
-                              page: "default",
+                              page: "page0",
                               email: "email0",
                               nextQuestions: [],
                             },
@@ -1122,6 +1122,10 @@ const questions = {
 
 const landings = [
   {
+    page: "page0",
+    url: "./pages/page0.html",
+  },
+  {
     page: "page1",
     url: "./pages/page1.html",
   },
@@ -1162,12 +1166,13 @@ const landings = [
 const emails = [
   {
     name: "email0",
-    Subject: "Has completado el test",
-    BodyTitle: "Hola name",
+    Subject: "Tus recomendaciones por parte de excellence",
+    BodyTitle: "Excellence.",
     message:
-      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
-    buttonMessage: "Visita nuestra página!",
-    buttonLink: "https://buscandoembarazo.com/",
+      "Hola, name \nDe acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti ",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page0.html?namePlaceholder=name",
   },
   {
     name: "email1",
@@ -1221,30 +1226,33 @@ const emails = [
   },
   {
     name: "email6",
-    Subject: "Has completado el test",
-    BodyTitle: "Hola name",
+    Subject: "Tus recomendaciones por parte de excellence",
+    BodyTitle: "Excellence",
     message:
-      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
-    buttonMessage: "Visita nuestra página!",
-    buttonLink: "https://buscandoembarazo.com/",
+      "Hola, name. \n De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page6.html?namePlaceholder=name",
   },
   {
     name: "email7",
-    Subject: "Has completado el test",
-    BodyTitle: "Hola name",
+    Subject: "Tus recomendaciones por parte de excellence",
+    BodyTitle: "Excellence",
     message:
-      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
-    buttonMessage: "",
-    buttonLink: "",
+      "Hola, name. \n De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page7.html?namePlaceholder=name",
   },
   {
     name: "email8",
-    Subject: "Has completado el test",
-    BodyTitle: "Hola name",
+    Subject: "Tus recomendaciones por parte de excellence",
+    BodyTitle: "Excellence",
     message:
-      "¿Sabías que la hormona Antimulleriana te muestra tu reserva ovárica? Visita a tu ginecólogo, realiza las pruebas pertinentes para tomar la decisión más acertada y ¡te esperamos pronto!",
-    buttonMessage: "",
-    buttonLink: "",
+      "Hola, name. \n De acuerdo a tus respuestas estas son las recomendaciones que tenemos para ti",
+    buttonMessage: "Tus recomendaciones",
+    buttonLink:
+      "https://8c78-181-234-146-191.ngrok.io/pages/page8.html?namePlaceholder=name",
   },
   {
     name: "man",
