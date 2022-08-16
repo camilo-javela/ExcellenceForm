@@ -66,8 +66,15 @@ p {
   background-size: cover;
 }
 
-.container-greeting {
+/*.container-discount {
   margin-top: 0px;
+  background-image: url("./../assets/img/bannerdescuento.jpg");
+  width: 600px;
+  height: 130px;
+} */
+
+.container-greeting {
+  margin-top: 70px;
   width: 400px;
   height: 300px;
 }
