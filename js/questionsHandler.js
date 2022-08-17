@@ -334,7 +334,7 @@ const questions = {
                           behavior: "",
                           icon: "fas fa-praying-hands",
                           label:
-                            "¿Estas embarazada o estás pensando quedarte embarazada?",
+                            "¿Estás embarazada o estás pensando quedarte embarazada?",
                           validationType: "none",
                           type: "select",
                           nextQuestions: [
@@ -1064,7 +1064,7 @@ const questions = {
                           behavior: "",
                           icon: "fas fa-shish-kebab",
                           label:
-                            "¿Estas embarazada o estás pensando quedarte embarazada?",
+                            "¿Estás embarazada o estás pensando quedarte embarazada?",
                           validationType: "none",
                           type: "select",
                           nextQuestions: [
@@ -1646,7 +1646,7 @@ function response(mailObj) {
   });
 
   sendEmail(email, mailObj);
-  sendResponses();
+  createResponseForm();
 }
 
 function sendEmail(email, objToSend) {
@@ -1681,15 +1681,32 @@ function sendEmail(email, objToSend) {
     );
 }
 
-function sendResponses() {
-  //https://script.google.com/macros/s/AKfycbw-1MBDxABAxQS8wq1EJs1DLqRJpGglUVjD_jMLhcdZ1kFOGb9g59ihovIF-CLR0OmT/exec
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbw-1MBDxABAxQS8wq1EJs1DLqRJpGglUVjD_jMLhcdZ1kFOGb9g59ihovIF-CLR0OmT/exec";
-  const form = document.forms["submit-to-google-sheet"];
+function createResponseForm() {
+  const form = document.createElement("form");
+  console.log(1, answers);
 
-  // fetch(scriptURL, { method: "POST", body: new FormData(form) })
-  //   .then((response) => console.log("Success!", response))
-  //   .catch((error) => console.error("Error!", error.message));
+  answers.forEach((obj) => {
+    let formNode = document.createElement("input");
+    const key = Object.keys(obj)[0];
+    formNode.name = key;
+    formNode.id = key;
+    formNode.value = obj[key].trim();
+    form.append(formNode);
+  });
+  sendResponses(form);
+}
+
+function sendResponses(form) {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbzru-JqqSUASbyJcku6C3xaoRU_Wp9MOoduQSX7OSuZUU7GzPt2VZGEkLvCJBTn6OWF/exec";
+
+  console.log(new FormData(form));
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => console.log(error));
 }
 
 function regexValidation(string, regexObject) {
@@ -1732,8 +1749,6 @@ function goBackHandler() {
 }
 
 function inputTypeError(validationMessage) {}
-
-function createResponseForm() {}
 
 function reloadPage() {
   if (confirm("¿Deseas comenzar de nuevo el test?")) {
