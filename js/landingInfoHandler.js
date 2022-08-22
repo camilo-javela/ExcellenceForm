@@ -12,6 +12,6 @@ function infoLanding() {
   }
 }
 
-function itemClick(e) {
-  location.href = e;
+function itemClick(url) {
+  location.href = url;
 }
