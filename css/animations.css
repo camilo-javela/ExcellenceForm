@@ -38,3 +38,36 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 600px) {
+  @keyframes entryAnimation {
+    0% {
+      transform: translateX(125vw);
+    }
+
+    40% {
+      transform: translateX(-50px);
+    }
+
+    50%,
+    70% {
+      transform: translateX(0);
+    }
+
+    60% {
+      transform: translateX(-35px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes exitAnimation {
+    0% {
+      transform: translateX(0vw);
+    }
+    100% {
+      transform: translateX(-125vw);
+    }
+  }
+}
