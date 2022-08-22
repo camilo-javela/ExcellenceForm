@@ -11,3 +11,7 @@ function infoLanding() {
     }
   }
 }
+
+function itemClick(e) {
+  location.href = e;
+}
