@@ -274,7 +274,7 @@ const questions = {
                           behavior: "",
                           label:
                             "¿Estás embarazada o estás pensando quedarte embarazada?",
-                          icon: "fas fa-baby-carriage",
+                          icon: "./../assets/icons/estoy_embarazada_15x15.svg",
                           validationType: "none",
                           type: "select",
                           nextQuestions: [
@@ -332,7 +332,7 @@ const questions = {
                           ask: "Quiero quedarme embarazada",
                           direction: "column",
                           behavior: "",
-                          icon: "fas fa-praying-hands",
+                          icon: "./../assets/icons/quiero_quedar_15x15.svg",
                           label:
                             "¿Estás embarazada o estás pensando quedarte embarazada?",
                           validationType: "none",
@@ -384,7 +384,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -446,7 +446,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -471,7 +471,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -533,7 +533,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -595,7 +595,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -620,7 +620,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -743,7 +743,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -805,7 +805,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -830,7 +830,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -892,7 +892,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -954,7 +954,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -979,7 +979,7 @@ const questions = {
                                               behavior: "",
                                               icon: "",
                                               label:
-                                                "¿Haz realizado o estas esperando para realizar algun tratamiento de reproduccion asistida?",
+                                                "¿Has realizado o estás esperando para realizar algún tratamiento de reproducción asistida?",
                                               validationType: "none",
                                               type: "select",
                                               nextQuestions: [
@@ -1062,7 +1062,7 @@ const questions = {
                           ask: "No estoy segura",
                           direction: "column",
                           behavior: "",
-                          icon: "fas fa-shish-kebab",
+                          icon: "./../assets/icons/no_segura_15x15.svg",
                           label:
                             "¿Estás embarazada o estás pensando quedarte embarazada?",
                           validationType: "none",
@@ -1330,7 +1330,7 @@ function saveName() {
     setTimeout(function () {
       document.getElementById("actualAnswer").value = "";
       document.getElementById("actualQuestion").innerHTML =
-        "Bienvenid@ " +
+        "Hola " +
         name +
         ", te haremos algunas preguntas para que puedas recibir las recomendaciones de nuestros expertos ";
       document.getElementById("animation").style.animation = "none";
@@ -1442,10 +1442,10 @@ function createSelect(questionString, label, icon, direction) {
   const question = document.createElement("p");
   question.innerHTML = questionString;
   if (icon != "") {
-    const iconElement = document.createElement("i");
+    const iconElement = document.createElement("img");
     iconElement.style.marginRight = "5px";
     iconElement.style.marginLeft = "5px";
-    iconElement.className = icon;
+    iconElement.src = icon;
     iconElement.style.width = "30px";
     iconElement.style.height = "30px";
     iconElement.style.flexBasis = "20%";
