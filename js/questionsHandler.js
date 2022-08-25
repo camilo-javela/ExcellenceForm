@@ -380,7 +380,7 @@ const questions = {
                                           nextQuestions: [
                                             {
                                               ask: " Sí    ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -442,7 +442,7 @@ const questions = {
                                             },
                                             {
                                               ask: "Estoy esperando la transferencia embrionaria",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -467,7 +467,7 @@ const questions = {
                                             },
                                             {
                                               ask: "No   ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -529,7 +529,7 @@ const questions = {
                                           nextQuestions: [
                                             {
                                               ask: " Sí   ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -591,7 +591,7 @@ const questions = {
                                             },
                                             {
                                               ask: "Estoy esperando la transferencia embrionaria    ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -616,7 +616,7 @@ const questions = {
                                             },
                                             {
                                               ask: "No        ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -739,7 +739,7 @@ const questions = {
                                           nextQuestions: [
                                             {
                                               ask: "Sí     ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -801,7 +801,7 @@ const questions = {
                                             },
                                             {
                                               ask: "Estoy esperando la transferencia embrionaria ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -826,7 +826,7 @@ const questions = {
                                             },
                                             {
                                               ask: "No      ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -888,7 +888,7 @@ const questions = {
                                           nextQuestions: [
                                             {
                                               ask: "Sí        ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -950,7 +950,7 @@ const questions = {
                                             },
                                             {
                                               ask: "Estoy esperando la transferencia embrionaria  ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -975,7 +975,7 @@ const questions = {
                                             },
                                             {
                                               ask: "No          ",
-                                              direction: "",
+                                              direction: "column",
                                               behavior: "",
                                               icon: "",
                                               label:
@@ -1424,6 +1424,7 @@ function deleteAllBlocks() {
 }
 
 function createSelect(questionString, label, icon, direction) {
+  const width = window.innerWidth > 0 ? window.innerWidth : screen.width;
   var localMainInput = document.getElementsByClassName("mainInput")[0];
   var localActualQuestion = document.getElementById("actualQuestion");
 
@@ -1460,8 +1461,9 @@ function createSelect(questionString, label, icon, direction) {
   localMainInput.style.flexWrap = "nowrap";
   if (direction == "column") {
     mainBlock.style.marginTop = "10px";
-    mainBlock.style.width = "50%";
-    mainBlock.style.textAlign = "left";
+    mainBlock.style.width =
+      questionString.length > 26 && width <= 600 ? "60%" : "50%";
+    mainBlock.style.textAlign = questionString.length > 26 ? "center" : "left";
   } else {
     mainBlock.style.marginRight = "3%";
   }
