@@ -95,6 +95,9 @@ p {
   color: #f5f5f5;
   font-weight: bold;
 }
+.name b {
+  font-size: xx-large;
+}
 
 /* CONTENEDOR INFERIOR */
 .container-product-recomendation {

@@ -6,7 +6,7 @@ function infoLanding() {
     for (let index = 0; index < nameElements.length; index++) {
       nameElements[index].innerHTML = nameElements[index].innerHTML.replace(
         "name",
-        param[1]
+        param[1].split(" ")[0]
       );
     }
   }
