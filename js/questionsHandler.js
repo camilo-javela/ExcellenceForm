@@ -1313,7 +1313,7 @@ function exitAnimation() {
 
 function saveName() {
   checkTag = document.getElementById("check");
-  var name = document.getElementById("actualAnswer").value;
+  var name = capitalize(document.getElementById("actualAnswer").value);
   let resultValidation = regexValidation(
     name,
     validations.find(({ type, regex }) => {
@@ -1574,6 +1574,7 @@ function createEnd(finishMessage, FinishTitle, page, email) {
   let redirectBtn = document.createElement("button");
   redirectBtn.className = "block";
   redirectBtn.innerHTML = "Ver recomendaciones";
+  redirectBtn.style.minWidth = "175px";
   redirectBtn.onclick = () => {
     location.href =
       landings.find((landing) => landing.page == page).url +
@@ -1757,4 +1758,17 @@ function reloadPage() {
     location.reload();
   } else {
   }
+}
+
+function capitalize(string) {
+  return string
+    .split(" ")
+    .reduce(
+      (previus_string, current_string) =>
+        previus_string +
+        " " +
+        current_string[0].toUpperCase() +
+        current_string.slice(1),
+      ""
+    );
 }
