@@ -1103,17 +1103,64 @@ const questions = {
       type: "select",
       nextQuestions: [
         {
-          ask: "Formulario finalizado",
-          direction: "",
+          ask: " Si ",
+          direction: "row",
           behavior: "",
           icon: "",
           label:
-            "<strong>¡Gracias por visitarnos!</strong><br></br> En este momento estamos preparando nuestro nuevo producto para fertilidad masculina y estará  muy pronto en nuestra tienda.",
+            "¿Quieres que te notifiquemos cuando tengamos nuestros productos para hombre?",
           validationType: "none",
-          type: "end",
-          page: "default",
-          email: "man",
-          nextQuestions: [],
+          type: "select",
+          nextQuestions: [
+            {
+              ask: "¿Cuál es tu correo electrónico? Para poder enviarte nuestras recomendaciones ",
+              direction: "",
+              behavior: "",
+              icon: "",
+              validationType: "email",
+              type: "input",
+              nextQuestions: [
+                {
+                  ask: "Formulario finalizado   ",
+                  direction: "",
+                  behavior: "",
+                  icon: "",
+                  label:
+                    "<strong>¡Gracias por visitarnos!</strong><br></br> En este momento estamos preparando nuestro nuevo producto para fertilidad masculina y estará  muy pronto en nuestra tienda.",
+                  validationType: "none",
+                  type: "end",
+                  page: "default",
+                  email: "man",
+                  nextQuestions: [],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          ask: " No      ",
+          direction: "row",
+          behavior: "",
+          icon: "",
+          label:
+            "¿Quieres que te notifiquemos cuando tengamos nuestros productos para hombre?",
+          validationType: "none",
+          type: "select",
+          nextQuestions: [
+            {
+              ask: "Formulario finalizado",
+              direction: "",
+              behavior: "",
+              icon: "",
+              label:
+                "<strong>¡Gracias por visitarnos!</strong><br></br> En este momento estamos preparando nuestro nuevo producto para fertilidad masculina y estará  muy pronto en nuestra tienda.",
+              validationType: "none",
+              type: "end",
+              page: "default",
+              email: "man",
+              nextQuestions: [],
+            },
+          ],
         },
       ],
     },
@@ -1564,6 +1611,12 @@ function createInput(questionString, behavior, validationType) {
 }
 
 function createEnd(finishMessage, FinishTitle, page, email) {
+  var actualAnswer = document.getElementById("actualAnswer");
+  var button = document.getElementById("button");
+  if (actualAnswer && button) {
+    button.remove();
+    actualAnswer.remove();
+  }
   var localMainInput = document.getElementsByClassName("mainInput")[0];
   if (localMainInput) {
     localMainInput.remove();
@@ -1602,6 +1655,23 @@ function nextQuestionsFinder(questionObject, answer) {
   const answerFinded = !Array.isArray(questionObject)
     ? questionObject
     : questionObject.find(({ ask }) => ask == answer);
+
+  if (
+    answers.length > 1 &&
+    answers[1][Object.keys(answers[1])[0]] === "Hombre"
+  ) {
+    const manQuestions = questionObject.nextQuestions[1].nextQuestions;
+
+    if (answer === "Hombre") {
+      return manQuestions;
+    } else {
+      if (answer.includes("Si")) {
+        return manQuestions[0].nextQuestions;
+      } else {
+        return manQuestions[1].nextQuestions;
+      }
+    }
+  }
 
   if (answerFinded && answerFinded.ask == answer) {
     return answerFinded.nextQuestions;
